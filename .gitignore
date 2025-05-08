@@ -1,0 +1,9 @@
+﻿# ignore cache and logs
+cache/
+*.log
+
+# ignore cfx artifacts
+cfx/
+
+# ignore any 'stream' subfolders under resources
+resources/**/stream/
