@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Abonelik hakkında soru sorun",
+    "modal_buy_subscription": "%s gün boyunca $%s satın almak istediğinizden emin misiniz?",
+    "modal_mole_name": "köstebek",
+    "target_buy_phone": "Trap Phone'u Satın Al",
+    "modal_buy_phone": "$%s karşılığında Tuzak Telefonu satın almak istediğinizden emin misiniz?",
+    "phone_mole_buy_message": "Evet, polisler mahallemde ortaya çıktığında sizi bilgilendireceğim. ",
+    "notify_set_waypoint": "GPS'inizi ayarladınız",
+    "target_retail_sell_drugs": "Etkileşimi Başlat",
+    "notify_exit_vehicle": "Araçtan çıkmanız gerekiyor.",
+    "notify_wholesale_info": "Buluşma noktasına çok yakınsınız, eğer uzaklaşırsanız toplantıyı iptal edeceksiniz.",
+    "notify_wholesale_info2": "Müşteriyle buluşma alanında herhangi bir silah çıkarırsanız, bunu bir dolandırıcılık girişimi olarak algılayacaktır.",
+    "notify_wholesale_fail_weapon": "Müşteri bunu dolandırıcılık olarak algıladı. ",
+    "target_wholesale_exchange": "Değişime devam edin",
+    "notify_wholesale_fail_drug": "Belirtilen ilaca yeterince sahip değilsiniz, müşteri bunu dolandırıcılık olarak algıladı. ",
+    "notify_wholesale_fail_distance": "Müşteriyle olan toplantıyı iptal ettiniz, saygınız %s düştü.",
+    "notify_wholesale_enemy_dead": "Polis gelmeden parayı müşteriden alın.",
+    "target_wholesale_steal_money": "Parayı çalmak",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Adamlarım mahallede bir polisi fark etti GPS'te onun son koordinatları işaretlenmiş. ",
+        "Adamlarımız bölgede bir polis gördü. ",
+        "Ekip yakınlarda bir polis memurunun olduğunu fark etti; onun son konumu GPS'inizde işaretlenmişti. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Uyuşturucu Sat: Oyuncunun hile/aksaklık girişimi: %s (ID: %s)",
+    "discord_hacker_title": "%s (Kimlik: %s, Vatandaş Kimliği: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** **config.lua**'da listelenmeyen bir ürünü satmaya çalışıyor\n\n",
+    "notify_retail_negotiating": "Verilen fiyat daha önce teklif ettiğiniz fiyattan daha yüksek veya ona eşit.",
+    "notify_buy_subscription_success": "%s adlı kişiden $%s karşılığında bir abonelik satın aldınız.",
+    "notify_buy_subscription_success2": "Abonelik hakkındaki bilgileri OG Uygulamasındaki Trap Phone'da bulabilirsiniz.",
+    "discord_buy_subscription_title": "%s (Kimlik: %s, Vatandaş Kimliği: %s)",
+    "discord_buy_subscription_message": "**%s**, **%s** tarihinden **%s** tarihine kadar geçerli olan **$%s** tutarında bir Abonelik satın aldı",
+    "notify_buy_subscription_fail_money": "$%s'i kaçırıyorsunuz.",
+    "notify_buy_subscription_fail_respect": "%s aboneliğini satın almak için %s saygı puanınız eksik.",
+    "notify_buy_subscription_fail_active": "Zaten %s ile aktif bir aboneliğiniz var.",
+    "notify_buy_phone_success": "Trap Phone'u $%s karşılığında satın aldınız.",
+    "notify_buy_phone_fail_money": "$%s'i kaçırıyorsunuz.",
+    "notify_buy_phone_fail_have": "Envanterinizde zaten Trap Phone var.",
+    "command_selldrugs_description": "İlaç Satışını Etkinleştirmek/Devre Dışı Bırakmaktan Sorumlu Komut",
+    "command_selldrugs-stats_description": "Bu komutla Gelişmiş İlaç Satışı scriptinde (Yönetici) Oyuncu İstatistiklerini Ekleyebilir veya Kaldırabilirsiniz.",
+    "command_selldrugs-stats_arg1_name": "Oyuncu Kimliği",
+    "command_selldrugs-stats_arg1_help": "İşlemi gerçekleştirmek istediğiniz oyuncunun kimliğini sağlayın",
+    "command_selldrugs-stats_arg2_name": "'ekle veya sil'",
+    "command_selldrugs-stats_arg2_help": "İstatistik Eklemek mi yoksa Çıkarmak mı istediğinizi seçin",
+    "command_selldrugs-stats_arg3_name": "'saygı' veya 'indirim_becerisi'",
+    "command_selldrugs-stats_arg3_help": "Üzerinde işlem yapmak istediğiniz İstatistiği seçin",
+    "command_selldrugs-stats_arg4_name": "değer",
+    "command_selldrugs-stats_arg4_help": "Eylemin gerçekleştirileceği değeri girin",
+    "notify_selldrugs-stats_add": "%s %s'yi %s Oyuncusuna eklediniz.",
+    "notify_selldrugs-stats_received": "%s'den %s %s aldınız.",
+    "notify_selldrugs-stats_remove": "%s %s'yi %s Oyuncusundan aldınız.",
+    "notify_selldrugs-stats_taken": "%s, %s %s'yi sizden aldı.",
+    "notify_retail_fail_police": "Uyuşturucu satabilecek %s memuru eksik.",
+    "notify_retail_stop": "Uyuşturucu satmayı bıraktın.",
+    "notify_retail_start": "Uyuşturucu satmaya başladın.",
+    "notify_retail_fail_drugs": "Üzerinizde uyuşturucu yok.",
+    "notify_retail_stop_drugs": "Üzerinizde uyuşturucu yok; satış bitti.",
+    "discord_hacker_make_trade_message": "**%s** satmak istediği ürüne sahip değil veya önceden pazarlık yapmadan satış yapmak için tetikleyici kullanıyor",
+    "notify_retail_sell": "%s gram %s'yi $%s karşılığında sattınız.",
+    "discord_retail_sell_title": "%s (Kimlik: %s, Vatandaş Kimliği: %s)",
+    "discord_retail_sell_message": "**%s** **%s gram** **%s**'yi **$%s** karşılığında sattı",
+    "notify_wholesale_sell": "%s gram %s'yi $%s karşılığında sattınız.",
+    "discord_wholesale_sell_title": "%s (Kimlik: %s, Vatandaş Kimliği: %s)",
+    "discord_wholesale_sell_message": "**%s** **%s gram** **%s**'yi **$%s** karşılığında sattı",
+    "notify_wholesale_attack_fail": "Müşteri bir dolandırıcılık girişimiyle tüm paranızı aldı.",
+    "discrod_wholesale_attack_title": "%s (Kimlik: %s, Vatandaş Kimliği: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s, Toptan Satış sırasında soyuldu**, değeri **%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s bir Toptan Satış sırasında bir Müşteriden çalındı**, değeri **%s**",
+    "notify_wholesale_attack_success": "Müşteriden $%s aldınız."
+  },
+  "html": {
+    "dialog_inventory_title": "TEÇHİZAT",
+    "phone_messages_title": "Mesajlar",
+    "phone_ogApp_title": "OG Uygulaması",
+    "phone_settings_title": "Ayarlar",
+    "phone_ogApp_respect_title": "Saygı",
+    "phone_ogApp_selling_skill_title": "Satış Becerisi",
+    "phone_ogApp_active_subscriptions_title": "Aktif Abonelikler",
+    "phone_setting_alerts": "Uyarılar",
+    "phone_setting_alerts_sound": "Uyarı Sesi",
+    "dialog_respect_tooltip": "Saygı: %s / %s",
+    "dialog_sales_skill_tooltip": "Satış becerileri: %s / %s",
+    "dialog_stranger_title": "YABANCI",
+    "notify_input_wrong": "Lütfen geçerli bir değer girin.",
+    "notify_inventory_select": "Envanterinizden bir öğe seçin",
+    "phone_call_stranger_title": "Yabancı",
+    "phone_call_message_end": "%s saniye süren bir görüşme başlattı",
+    "phone_message_input_drug_amount": "Ne kadar girin...",
+    "phone_message_input_price": "Birim fiyatınızı belirleyin...",
+    "phone_alert_player": "Siz: %s",
+    "notify_settings_error": "Ayarları tekrar değiştirmeden önce 5 saniye beklemeniz gerekir.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Satılıklarım: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Ne istiyorsun?",
+        "Ne arıyorsun?",
+        "Şu anda size nasıl yardımcı olabilirim?"
+      ],
+      "dialog_npc_take": [
+        "Tamam, %s parçasını %s alacağım. ",
+        "Tamam, %s adet %s sipariş etmek istiyorum. ",
+        "%s %s parçasını alacağım. "
+      ],
+      "dialog_answer_start_normal": [
+        "Bir maceraya var mısın?",
+        "Heyecan verici bir şeyin havasında mısın?",
+        "Yeni ve heyecan verici bir şey denemek ister misiniz?"
+      ],
+      "dialog_answer_start_exit": [
+        "Sadece geçiyordum, teşekkürler.",
+        "Aslında bu seferlik geçeceğimi düşünüyorum, teşekkürler.",
+        "Tekrar düşündüm; belki başka bir zaman. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Bugün hangi ürünleri sunacaksınız?",
+        "Şu anda satın alınabilecek öğeleri bana gösterebilir misiniz?",
+        "Şu anki seçiminizi merak ediyorum. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Tekrar düşündüğümde, şu anda hiçbir şeyim yok.",
+        "Aslında tekrar düşününce şu anda sunabileceğim hiçbir şey yok.",
+        "Şu anda elimde hiçbir ürün olmadığını fark ettim."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Birim fiyatınızı belirleyin...",
+        "Adet başına fiyat...",
+        "Her birim size mal olacak..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Sana başka bir şey göstereyim.",
+        "Sizi bir başka ürünümüzle tanıştırmama ne dersiniz?",
+        "Belki sahip olduğumuz farklı bir ürünü görmek ilginizi çeker?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Fikrimi değiştirdim, bugün satmıyorum.",
+        "Aslında bugün satmayacağım.",
+        "Bugün satmamaya karar verdim."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Bana daha iyi bir fiyat verin, bu bana yakışmıyor.",
+        "Bu fiyat biraz yüksek gibi görünüyor. ",
+        "Daha makul bir fiyat arıyorum. "
+      ],
+      "dialog_npc_noThanks": [
+        "Bunu geçeceğim, pek iyi bir anlaşma gibi görünmüyor.",
+        "Sanırım reddedeceğim, fiyat bana uymuyor.",
+        "Hayır teşekkürler, anlaşma tam olarak aradığım şey değil."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Kaybınız, belki bir dahaki sefere.",
+        "Bu utanç verici. ",
+        "Bunu duyduğuma üzüldüm. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Teklifinle ilgileniyorum. ",
+        "Bu bana iyi geliyor. ",
+        "Bu şartları kabul ediyorum. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Harika, sizinle iş yapmak büyük zevk.",
+        "Harika, anlaşmaya varabildiğimize sevindim.",
+        "Harika, bunu seninle ayarlamak büyük bir zevkti."
+      ],
+      "dialog_npc_sellFail": [
+        "Bu fiyat bana uymaz. ",
+        "Bu fiyata razı olamam. ",
+        "Fiyat bana göre çok yüksek. "
+      ],
+      "dialog_answer_exit": [
+        "Çok kötü, belki başka zaman.",
+        "Üzgünüz, bunu çalıştıramadık. ",
+        "Anlaşıldı, umarım başka zaman iş yapabiliriz."
+      ],
+      "phone_message_accept_offer": [
+        "Tamam, %s miktarda alacağım.",
+        "Tamam, %s birim için varım.",
+        "%s tutarında satın almayı kabul ediyorum."
+      ],
+      "phone_message_gps": [
+        "Burada görünün.",
+        "Benimle bu yerde buluş.",
+        "Verilen adrese gelin."
+      ],
+      "phone_message_no_places": [
+        "Ancak anlaşma yapmayacağız, benim açımdan bir şeyler ters gitti.",
+        "Ne yazık ki bu anlaşmadan çekilmek zorundayım, benim tarafımda bir sorun var.",
+        "Planlarda değişiklik yaptım ve anlaşmaya devam edemiyorum, rahatsızlıktan dolayı özür dilerim."
+      ],
+      "phone_message_drug_amount": [
+        "%s miktarım var.",
+        "Stokum %s adettir.",
+        "Şu anda %s miktarını tutuyorum."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Bu kadar şeye ihtiyacım olacağını düşünmen çok komiksin evlat.",
+        "Bu miktarla şaka yapıyor olmalısın.",
+        "Bu iyi bir şey ama miktar konusunda ciddi olalım."
+      ],
+      "phone_message_price_question": [
+        "Bir adet için ne kadar istiyorsunuz?",
+        "Birim fiyatı nedir?",
+        "Bana her miktarın maliyetini söyleyebilir misiniz?"
+      ],
+      "phone_message_price_answer": [
+        "Bir miktar için $%s.",
+        "Her miktarın fiyatı $%s'dir.",
+        "Her birim size $%s'a mal olacak."
+      ],
+      "phone_message_call": [
+        "Tamam, daha fazla bilgi için beni ara.",
+        "Tamam, tartışılacak başka bir şey olursa beni ara.",
+        "Kulağa iyi geliyor. "
+      ],
+      "phone_message_price_fail": [
+        "Bu fiyata mı? ",
+        "Bu fiyat benim için fırsat kırıcıdır. ",
+        "O kadar para vermem mümkün değil. "
+      ]
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Fragen Sie nach dem Abonnement",
+    "modal_buy_subscription": "Sind Sie sicher, dass Sie $%s für %s Tage kaufen möchten?",
+    "modal_mole_name": "Mol",
+    "target_buy_phone": "Trap Phone kaufen",
+    "modal_buy_phone": "Sind Sie sicher, dass Sie ein Trap Phone für $%s kaufen möchten?",
+    "phone_mole_buy_message": "„Sup, ich werde dich auf dem Laufenden halten, wenn Polizisten in meiner Nachbarschaft auftauchen. ",
+    "notify_set_waypoint": "Sie haben Ihr GPS eingestellt",
+    "target_retail_sell_drugs": "Starten Sie die Interaktion",
+    "notify_exit_vehicle": "Sie müssen das Fahrzeug verlassen.",
+    "notify_wholesale_info": "Sie befinden sich ganz in der Nähe des Treffpunkts. Wenn Sie sich entfernen, wird das Treffen abgesagt.",
+    "notify_wholesale_info2": "Wenn Sie im Besprechungsbereich mit dem Kunden eine Waffe zücken, wird er dies als Betrugsversuch auffassen.",
+    "notify_wholesale_fail_weapon": "Der Kunde hielt es für Betrug. ",
+    "target_wholesale_exchange": "Fahren Sie mit dem Austausch fort",
+    "notify_wholesale_fail_drug": "Sie haben nicht genug von dem angegebenen Medikament, der Kunde hat es als Betrug angesehen. ",
+    "notify_wholesale_fail_distance": "Sie haben das Treffen mit dem Kunden abgesagt, Ihr Respekt sinkt um %s.",
+    "notify_wholesale_enemy_dead": "Nehmen Sie dem Kunden das Geld ab, bevor die Polizei eintrifft.",
+    "target_wholesale_steal_money": "Stehlen Sie das Geld",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Meine Leute haben einen Polizisten in der Nachbarschaft bemerkt – auf dem GPS sind seine letzten Koordinaten markiert. ",
+        "Unsere Jungs haben in der Gegend einen Polizisten entdeckt. ",
+        "Das Team hat einen Polizisten in der Nähe bemerkt – sein letzter Standort ist auf Ihrem GPS markiert. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Drogen verkaufen: Betrugs-/Glitching-Versuch des Spielers: %s (ID: %s)",
+    "discord_hacker_title": "%s (ID: %s, Bürger-ID: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** versucht einen Artikel zu verkaufen, der nicht in der **config.lua** aufgeführt ist\n\n",
+    "notify_retail_negotiating": "Der angegebene Preis ist höher oder gleich dem von Ihnen zuvor angebotenen.",
+    "notify_buy_subscription_success": "Sie haben ein Abonnement von %s für $%s erworben.",
+    "notify_buy_subscription_success2": "Informationen zum Abonnement finden Sie in Trap Phone in der OG-App.",
+    "discord_buy_subscription_title": "%s (ID: %s, Bürger-ID: %s)",
+    "discord_buy_subscription_message": "**%s** hat ein Abonnement von **%s** mit Gültigkeit bis **%s** für den Betrag von **$%s** gekauft",
+    "notify_buy_subscription_fail_money": "Ihnen fehlen $%s.",
+    "notify_buy_subscription_fail_respect": "Ihnen fehlen %s Respektpunkte, um ein %s Abonnement zu erwerben.",
+    "notify_buy_subscription_fail_active": "Sie haben bereits ein aktives Abonnement bei %s.",
+    "notify_buy_phone_success": "Sie haben Trap Phone für $%s gekauft.",
+    "notify_buy_phone_fail_money": "Ihnen fehlen $%s.",
+    "notify_buy_phone_fail_have": "Sie haben bereits Trap Phone in Ihrem Inventar.",
+    "command_selldrugs_description": "Befehl, der für die Aktivierung/Deaktivierung des Arzneimittelverkaufs verantwortlich ist",
+    "command_selldrugs-stats_description": "Mit diesem Befehl können Sie Spielerstatistiken im Advanced Drug Sales-Skript (Administrator) hinzufügen oder entfernen.",
+    "command_selldrugs-stats_arg1_name": "Spieler-ID",
+    "command_selldrugs-stats_arg1_help": "Geben Sie die ID des Spielers an, bei dem Sie die Aktion durchführen möchten",
+    "command_selldrugs-stats_arg2_name": "'hinzufügen oder entfernen'",
+    "command_selldrugs-stats_arg2_help": "Wählen Sie, ob Sie Statistiken hinzufügen oder subtrahieren möchten",
+    "command_selldrugs-stats_arg3_name": "'Respekt' oder 'Sale_Skill'",
+    "command_selldrugs-stats_arg3_help": "Wählen Sie die Statistik aus, für die Sie eine Aktion ausführen möchten",
+    "command_selldrugs-stats_arg4_name": "Wert",
+    "command_selldrugs-stats_arg4_help": "Geben Sie den Wert ein, für den die Aktion ausgeführt werden soll",
+    "notify_selldrugs-stats_add": "Du hast %s %s zum Spieler %s hinzugefügt.",
+    "notify_selldrugs-stats_received": "Sie haben %s %s von %s erhalten.",
+    "notify_selldrugs-stats_remove": "Du hast %s %s vom Spieler %s weggenommen.",
+    "notify_selldrugs-stats_taken": "%s hat dir %s %s weggenommen.",
+    "notify_retail_fail_police": "Es fehlen %s Beamte, um Drogen verkaufen zu können.",
+    "notify_retail_stop": "Sie haben aufgehört, Drogen zu verkaufen.",
+    "notify_retail_start": "Sie haben angefangen, Drogen zu verkaufen.",
+    "notify_retail_fail_drugs": "Du hast keine Drogen bei dir.",
+    "notify_retail_stop_drugs": "Sie haben keine Drogen bei sich – der Verkauf ist beendet.",
+    "discord_hacker_make_trade_message": "**%s** besitzt den Artikel, den sie verkaufen möchten, nicht oder verwendet einen Auslöser für den Verkauf ohne vorherige Verhandlung",
+    "notify_retail_sell": "Sie haben %s Gramm %s für $%s verkauft.",
+    "discord_retail_sell_title": "%s (ID: %s, Bürger-ID: %s)",
+    "discord_retail_sell_message": "**%s** verkaufte **%s Gramm** von **%s** für **$%s**",
+    "notify_wholesale_sell": "Sie haben %s Gramm %s für $%s verkauft.",
+    "discord_wholesale_sell_title": "%s (ID: %s, Bürger-ID: %s)",
+    "discord_wholesale_sell_message": "**%s** verkaufte **%s Gramm** von **%s** für **$%s**",
+    "notify_wholesale_attack_fail": "Der Kunde hat bei einem Betrugsversuch Ihr gesamtes Bargeld gestohlen.",
+    "discrod_wholesale_attack_title": "%s (ID: %s, Bürger-ID: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s wurde während eines Großhandelsverkaufs ausgeraubt**, Wert **$%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s wurde einem Kunden während eines Großhandelsverkaufs gestohlen, Wert **$%s**",
+    "notify_wholesale_attack_success": "Sie haben dem Kunden $%s abgenommen."
+  },
+  "html": {
+    "dialog_inventory_title": "AUSRÜSTUNG",
+    "phone_messages_title": "Mitteilungen",
+    "phone_ogApp_title": "OG-App",
+    "phone_settings_title": "Einstellungen",
+    "phone_ogApp_respect_title": "Respektieren",
+    "phone_ogApp_selling_skill_title": "Verkaufskompetenz",
+    "phone_ogApp_active_subscriptions_title": "Aktive Abonnements",
+    "phone_setting_alerts": "Warnungen",
+    "phone_setting_alerts_sound": "Warnton",
+    "dialog_respect_tooltip": "Respekt: ​​%s / %s",
+    "dialog_sales_skill_tooltip": "Verkaufskompetenzen: %s / %s",
+    "dialog_stranger_title": "FREMDER",
+    "notify_input_wrong": "Bitte geben Sie einen gültigen Wert ein.",
+    "notify_inventory_select": "Wählen Sie einen Artikel aus Ihrem Inventar aus",
+    "phone_call_stranger_title": "Fremder",
+    "phone_call_message_end": "Habe ein Gespräch begonnen, das %s Sekunden gedauert hat",
+    "phone_message_input_drug_amount": "Geben Sie ein, wie viel...",
+    "phone_message_input_price": "Legen Sie Ihren Preis pro Einheit fest...",
+    "phone_alert_player": "Sie: %s",
+    "notify_settings_error": "Sie müssen 5 Sekunden warten, bevor Sie die Einstellungen erneut ändern.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Ich habe zum Verkauf: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Was willst du?",
+        "Wonach suchst du?",
+        "Wie kann ich Ihnen in diesem Moment helfen?"
+      ],
+      "dialog_npc_take": [
+        "Okay, ich nehme %s Stücke von %s. ",
+        "Okay, ich möchte %s Einheiten von %s bestellen. ",
+        "Ich nehme %s Stücke von %s. "
+      ],
+      "dialog_answer_start_normal": [
+        "Lust auf ein Abenteuer?",
+        "Haben Sie Lust auf etwas Aufregendes?",
+        "Möchten Sie etwas Neues und Aufregendes ausprobieren?"
+      ],
+      "dialog_answer_start_exit": [
+        "Bin gerade auf der Durchreise, danke.",
+        "Eigentlich denke ich, dass ich dieses Mal bestehen werde, danke.",
+        "Ich habe es mir noch einmal überlegt – vielleicht ein andermal. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Welche Waren haben Sie heute anzubieten?",
+        "Können Sie mir zeigen, welche Artikel derzeit zum Kauf verfügbar sind?",
+        "Ich bin gespannt auf Ihre aktuelle Auswahl. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Wenn ich es mir genauer überlege, habe ich im Moment nichts.",
+        "Eigentlich habe ich, wenn ich es noch einmal überdenke, derzeit nichts anzubieten.",
+        "Ich habe gerade festgestellt, dass ich im Moment keine Artikel verfügbar habe."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Legen Sie Ihren Preis pro Einheit fest...",
+        "Der Preis pro Artikel beträgt...",
+        "Jede Einheit kostet Sie..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Lassen Sie mich Ihnen noch etwas zeigen.",
+        "Wie wäre es, wenn ich Ihnen ein weiteres unserer Produkte vorstellen würde?",
+        "Vielleicht interessieren Sie sich für einen anderen Artikel, den wir haben?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Ich habe meine Meinung geändert und verkaufe es heute nicht.",
+        "Eigentlich werde ich es heute nicht verkaufen.",
+        "Beschlossen, heute nicht zu verkaufen."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Geben Sie mir einen besseren Preis, dieser passt mir nicht.",
+        "Dieser Preis scheint etwas hoch zu sein. ",
+        "Ich suche nach einem günstigeren Preis. "
+      ],
+      "dialog_npc_noThanks": [
+        "Ich werde das weitergeben, es scheint kein gutes Geschäft zu sein.",
+        "Ich denke, ich werde ablehnen, da der Preis für mich nicht in Frage kommt.",
+        "Nein danke, das Angebot ist nicht ganz das, was ich suche."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Dein Verlust, vielleicht beim nächsten Mal.",
+        "Das ist eine Schande. ",
+        "Tut mir leid das zu hören. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Ich interessiere mich für Ihr Angebot. ",
+        "Das hört sich für mich gut an. ",
+        "Ich stimme diesen Bedingungen zu. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Großartig, es macht mir Freude, mit Ihnen Geschäfte zu machen.",
+        "Ausgezeichnet, ich bin froh, dass wir uns einigen konnten.",
+        "Fantastisch, es war mir eine Freude, dies mit Ihnen zu arrangieren."
+      ],
+      "dialog_npc_sellFail": [
+        "Für mich funktioniert dieser Preis nicht. ",
+        "Ich kann diesem Preis nicht zustimmen. ",
+        "Der Preis ist mir zu hoch. "
+      ],
+      "dialog_answer_exit": [
+        "Schade, vielleicht ein anderes Mal.",
+        "Es tut uns leid, dass wir es nicht zum Laufen bringen konnten. ",
+        "Verstanden, ich hoffe, wir können ein anderes Mal Geschäfte machen."
+      ],
+      "phone_message_accept_offer": [
+        "Okay, ich nehme %s Mengen.",
+        "Okay, ich bin für %s Einheiten dabei.",
+        "Ich bin damit einverstanden, %s Beträge zu kaufen."
+      ],
+      "phone_message_gps": [
+        "Hier auftauchen.",
+        "Treffen Sie mich an diesem Ort.",
+        "Kommen Sie zur angegebenen Adresse."
+      ],
+      "phone_message_no_places": [
+        "Wir werden jedoch keinen Deal machen, da auf meiner Seite etwas schief gelaufen ist.",
+        "Leider muss ich von diesem Deal zurücktreten, da bei mir ein Problem aufgetreten ist.",
+        "Ich habe meine Pläne geändert und kann den Deal nicht abschließen. Bitte entschuldigen Sie die Unannehmlichkeiten."
+      ],
+      "phone_message_drug_amount": [
+        "Ich habe %s Mengen.",
+        "Mein Bestand beträgt %s Einheiten.",
+        "Ich behalte gerade %s Mengen."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Du bist lustig, Junge, du denkst, ich bräuchte so viel.",
+        "Mit diesem Betrag machen Sie sicher Witze.",
+        "Das ist gut, aber nehmen wir die Menge ernst."
+      ],
+      "phone_message_price_question": [
+        "Wie viel möchten Sie für eine Menge?",
+        "Wie hoch ist der Preis pro Einheit?",
+        "Können Sie mir die Kosten für jede Menge nennen?"
+      ],
+      "phone_message_price_answer": [
+        "$%s für eine Menge.",
+        "Der Preis für jede Menge beträgt $%s.",
+        "Jede Einheit kostet Sie $%s."
+      ],
+      "phone_message_call": [
+        "Okay, rufen Sie mich für weitere Informationen an.",
+        "Okay, rufen Sie mich an, wenn es noch mehr zu besprechen gibt.",
+        "Hört sich gut an. "
+      ],
+      "phone_message_price_fail": [
+        "Zu diesem Preis? ",
+        "Dieser Preis ist für mich ein Deal-Breaker. ",
+        "Auf keinen Fall bezahle ich so viel. "
+      ]
+    }
+  }
+}

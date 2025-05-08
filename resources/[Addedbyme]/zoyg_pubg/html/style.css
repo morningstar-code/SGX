@@ -1,0 +1,831 @@
+
+.body {
+	background-color: rgba(0,0,0,0);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	color: rgba(0,0,0,0);
+	font-family: 'Karantina';
+
+}
+
+.pubgmenu {
+	margin-top: 210px;
+	box-shadow: 0px 0px 70px 40px rgba(10,10,10,1);
+	display: none;
+	height:600px;
+	width: 1000px;
+	background-image: url('./images/pubgold.png');
+	background-color: rgba(10,10,10,0.6);
+	background-size: 1000px 600px;
+}
+
+.pubgstoremenu {
+	margin-top: 210px;
+	display: none;
+	box-shadow: 0px 0px 70px 40px rgba(10,10,10,1);
+
+	height:600px;
+	width: 1000px;
+	background-image: url('./images/pubgweaponshop.png');
+	background-color: rgba(10,10,10,0.6);
+	background-size: 1000px 600px;
+}
+
+.statisticmenu {
+	margin-top: 210px;
+	display: none;
+	box-shadow: 0px 0px 70px 40px rgba(10,10,10,1);
+	height:600px;
+	width: 1000px;
+	background-image: url('./images/pubgstat.png');
+	background-color: rgba(10,10,10,0.6);
+	background-size: 1000px 600px;
+}
+
+.settingsmenu {
+	margin-top: 210px;
+	display: none;
+	box-shadow: 0px 0px 70px 40px rgba(10,10,10,1);
+	display: none;
+	height:600px;
+	width: 1000px;
+	background-image: url('./images/pubgweaponshop.png');
+	background-color: rgba(10,10,10,0.6);
+	background-size: 1000px 600px;
+}
+
+
+.pubgmenubut {
+	margin-top: 200px;
+	display: none;
+}
+
+.panem {
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,1);
+	border: 0px solid rgba(0,0,0,0);
+	padding-left: 10px;
+}
+
+.panemm {
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.8);
+	border: 0px solid rgba(0,0,0,0);
+}
+
+.bptag {
+	background-color: rgba(0, 0, 0, 0.0);
+	color: yellow;
+	border: 0px solid rgba(0,0,0,0);
+}
+.bp {
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,1);
+	border: 0px solid rgba(0,0,0,0);
+}
+
+.startButton {
+	margin-top: 200px;
+	width: 200px;
+	height: 70px;
+	position: absolute;
+	top: 48%;
+	left: 25%;
+	background-color: rgba(245, 216, 52, 0.7);
+	font-family: 'Karantina';
+	font-size: 60px;
+	border: 3px solid #f5d834
+}
+
+.startButton:hover {
+  text-shadow: 0px 0px 80px #f5d834;
+  background-color: rgba(245, 216, 52, 1);
+}
+
+.statusmenu1 {
+	margin-top: 200px;
+	width: 200px;
+	height: 150px;
+	position: absolute;
+	top: 34%;
+	left: 25%;
+	background: linear-gradient(rgba(10,10,10,0.7) 40%, rgba(10,10,10,0.1));
+	font-family: 'Karantina';
+	font-size: 60px;
+	color: white;
+}
+
+.status1 {
+	width: 180px;
+	height: 30px;
+	position: absolute;
+	top: 22%;
+	left: 5%;
+	background-color: rgba(180, 180, 180, 0.3);
+	font-family: 'PT Sans', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+}
+
+.pubggamemenu {
+	display: none;
+}
+
+.players1 {
+	width: 180px;
+	height: 30px;
+	position: absolute;
+	top: 63%;
+	left: 5%;
+	background-color: rgba(180, 180, 180, 0.3);
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	padding-top: 5px;
+}
+
+.playButton {
+	margin-top: 200px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 1.5%;
+	left: 32.5%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 50px;
+	border: 0px solid rgba(0,0,0,0);
+}
+
+.storeButton {
+	margin-top: 200px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 1.5%;
+	left: 37.5%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 50px;
+	border: 0px solid rgba(0,0,0,0);
+}
+
+.statisticButton {
+	margin-top: 200px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 1.5%;
+	left: 43.0%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 50px;
+	border: 0px solid rgba(0,0,0,0);
+}
+
+.weaponButton {
+	margin-top: 200px;
+	display: none;
+	width: 87px;
+	height: 40px;
+	position: absolute;
+	top: 7%;
+	left: 32.5%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 35px;
+	border: 0px solid rgba(0,0,0,0)
+}
+
+.itemButton {
+	margin-top: 200px;
+	display: none;
+	width: 57px;
+	height: 40px;
+	position: absolute;
+	top: 7%;
+	left: 39%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 35px;
+	border: 0px solid rgba(0,0,0,0)
+}
+
+.mystatsButton {
+	margin-top: 200px;
+	display: none;
+	width: 95px;
+	height: 40px;
+	position: absolute;
+	top: 7%;
+	left: 32.5%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 35px;
+	border: 0px solid rgba(0,0,0,0)
+}
+
+.topwinnersButton {
+	margin-top: 200px;
+	display: none;
+	width: 130px;
+	height: 40px;
+	position: absolute;
+	top: 7%;
+	left: 39%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 35px;
+	border: 0px solid rgba(0,0,0,0)
+}
+
+.topkillersButton {
+	margin-top: 200px;
+	display: none;
+	width: 120px;
+	height: 40px;
+	position: absolute;
+	top: 7%;
+	left: 47%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.7);
+	font-family: 'Karantina';
+	font-size: 35px;
+	border: 0px solid rgba(0,0,0,0)
+}
+
+
+.playButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+}
+
+.statisticButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+}
+
+
+.storeButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+}
+
+.weaponButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+  border-bottom: 1px solid white;
+}
+
+.itemButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+   border-bottom: 1px solid white;
+}
+
+.mystatsButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+   border-bottom: 1px solid white;
+}
+.topwinnersButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+   border-bottom: 1px solid white;
+}
+.topkillersButton:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+   border-bottom: 1px solid white;
+}
+
+
+
+
+.settings {
+	margin-top: 200px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 3%;
+	left: 72%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.8);
+	font-family: 'Karantina';
+	font-size: 30px;
+	border: 0px solid rgba(0,0,0,0);
+	padding-right: 25px;
+	margin-right: 25px;
+}
+
+.settings:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+}
+
+.quest {
+	margin-top: 200px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 3%;
+	left: 69%;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: rgba(255,255,255,0.8);
+	font-family: 'Karantina';
+	font-size: 30px;
+	border: 0px solid rgba(0,0,0,0);
+	padding-right: 25px;
+	margin-right: 25px;
+}
+
+.quest:focus {
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 50px rgba(255,255,255,2);
+}
+
+.losermenu {
+	background: rgba(0,0,0,0.8);
+	width: 65%;
+	height: 65%;
+	margin-top: 8%;
+	display: none;
+}
+
+
+.playernamelose {
+	color: white;
+	font-size: 40px;
+	position: absolute;
+	top: 17%;
+	left:20%;
+	font-family: 'Oswald', sans-serif;
+}
+
+.placement {
+	color: rgba(200,200,200,0.6);
+	font-size: 60px;
+	position: absolute;
+	top: 17%;
+	right: 20%;
+
+	font-family: 'Teko', sans-serif;
+
+}
+
+.winnertick {
+	color: rgb(255,215,0);
+	font-size: 60px;
+	position: absolute;
+	top: 22%;
+	left:20%;
+	font-family: 'Karantina', sans-serif;
+}
+
+.killedby {
+	display: none;
+	color: rgb(255,215,0);
+	font-size: 60px;
+	position: absolute;
+	top: 42%;
+	left:20%;
+	font-family: 'Teko', sans-serif;
+}
+
+.killer {
+	color: white;
+	font-size: 60px;
+	position: absolute;
+	top: 48%;
+	left:20%;
+	font-family: 'Oswald', sans-serif;
+}
+
+.teamrank {
+	color: rgba(240,240,240,0.8);
+	font-size: 27px;
+	position: absolute;
+	top: 29%;
+	left:20%;
+	font-family: 'Abel', sans-serif;
+	border-bottom: 1px solid rgb(140, 140, 140);
+	padding-bottom: 15px;
+
+}
+
+.killing {
+	color: rgba(240,240,240,0.8);
+	font-size: 27px;
+	position: absolute;
+	top: 29%;
+	left: 27%;
+	font-family: 'Abel', sans-serif;
+	border-bottom: 1px solid rgb(140, 140, 140);
+	padding-bottom: 15px;
+	
+}
+
+.reward {
+	color: rgba(240,240,240,0.8);
+	font-size: 27px;
+	position: absolute;
+	top: 29%;
+	left: 34%;
+	font-family: 'Abel', sans-serif;
+	border-bottom: 1px solid rgb(140, 140, 140);
+	padding-bottom: 15px;
+	
+}
+
+.gamerewardanaly {
+	color: rgba(240,240,240,0.8);
+	font-size: 14px;
+	position: absolute;
+	top: 34%;
+	left: 34%;
+	font-family: 'Oswald', sans-serif;
+	width: 100px;
+	height:100px;
+
+	text-align: left;
+}
+
+.gamerewardanalys {
+	color: rgba(240,240,240,0.8);
+	font-size: 14px;
+	position: absolute;
+	top: 34%;
+	left:38.5%;
+	font-family: 'Oswald', sans-serif;
+	width: 74px;
+	height:100px;
+
+	text-align: right;
+}
+
+.exitmapbutton {
+	color: white;
+	position:absolute;
+	top: 72%;
+	left: 20%;
+	background: rgba(0,0,0,0.7);
+	border-radius: 39px;
+	border: 2px solid white;
+	font-family: 'Teko', sans-serif;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 170px;
+	font-size: 23px;
+	
+}
+
+.stl {
+	display: none;
+	color: rgb(255,215,0);
+	position:absolute;
+	top: 73%;
+	left: 30%;
+	background: rgba(0,0,0,0.0);
+	font-family: 'Teko', sans-serif;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 23px;
+}
+
+
+.exitmapbutton:hover {
+  color: black;
+  background: rgb(255,215,0);
+  border: 2px solid rgb(255,215,0);
+}
+
+
+/*     --------------------------------------------    */
+
+#slider {
+	margin-top: 200px;
+	position:absolute;
+	top: 15%;
+	left: 58%;
+	overflow: hidden;
+	max-width: 300px;
+	height: auto;
+	border: 4px solid rgb(24,24,24)
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 14s slider infinite;
+}
+#slider figure img {
+	float: left;
+	width: 20%;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+
+.productstore {
+	margin-top: 200px;
+   background: rgba(10,10,10,0.8);
+   border-top: 2px solid rgba(240,240,240,0.8);
+   border-bottom: 2px solid rgba(240,240,240,0.8);
+   top: 12%;
+    position: absolute;
+	font-family: 'Segoe UI';
+	overflow-x:hidden;
+	width: 1000px;
+	height: 450px;
+	color: rgba(255, 255, 255, 0.9);
+	overflow-y:scroll;
+}
+
+.previewstore {
+	margin-top: 200px;
+	display: none;
+   background: rgba(10,10,10,0.8);
+   border-top: 2px solid rgba(240,240,240,0.8);
+   border-bottom: 2px solid rgba(240,240,240,0.8);
+   top: 12%;
+    position: absolute;
+	font-family: 'Segoe UI';
+	overflow-x:hidden;
+	width: 1000px;
+	height: 450px;
+	color: rgba(255, 255, 255, 0.9);
+	overflow-y:scroll;
+}
+
+
+.bp-pointstobuy {
+	width:240px;
+	float:left;
+	padding:10px 5px;
+	background:rgba(0,0,0,0.3);
+	border-right:1px solid #3a3a3a;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+
+.bp-pointstobuy-img {
+	width:60px;
+	background:#0a0a0a;
+	padding:10px;
+	border:1px solid #1f1f1f;
+	float:left;
+}
+
+
+
+.bp-pointstobuy-name {
+	font-size:18px;
+	line-height:80px;
+	float:left;
+	margin:0 20px;
+	
+}
+
+
+.productplus {
+	width:160px;
+	height:150px;
+	background-blend-mode:screen;
+	text-align:center;
+	padding-bottom:30px;
+
+	font-size:14px;
+
+	transition: 0.3s;
+	margin: 17px;
+	float:left;
+	background: rgba(50,50,50,0.7);
+	border: 2px solid rgb(100,100,100);
+}
+
+
+.productplus-img {
+	width:150px;
+	height: 75px;
+	margin:auto;
+	margin-top:23px;
+	image-rendering: auto;
+	
+}
+
+
+.productplus-name {
+
+	margin: auto;
+}
+
+.productplus-preview {
+	width:100%;
+	height:44px;
+	background: rgba(70,70,70,0.7);
+	outline:none;
+	color:#fff;
+	font-size:11px;
+	border:none;
+	letter-spacing:3px;
+	text-shadow: 0 0 10px rgb(255, 255, 255);
+	margin: auto;
+}
+
+.productplus-preview:hover {
+	background: rgba(240,240,240,0.8);
+	border: 2px solid rgba(240,240,240,0.8);
+	color: rgba(50,50,50,0.7);
+	text-shadow: 0 0 10px rgba(50,50,50,0.7);
+	cursor:pointer;
+	box-shadow: 0 0 10px white;
+}
+
+
+.productplus-preview-buy {
+	width:100%;
+	height:44px;
+	background: rgba(50,50,50,0.7);
+	color:#fff;
+	font-size:11px;
+	border: 1px solid white;
+	letter-spacing:3px;
+	text-shadow: 0 0 10px rgb(255, 255, 255);
+
+}
+
+.productplus-preview-buy:hover {
+	background: rgba(240,240,240,0.8);
+	border: 2px solid rgba(240,240,240,0.8);
+	color: rgba(50,50,50,0.7);
+	text-shadow: 0 0 10px rgba(50,50,50,0.7);
+	cursor:pointer;
+	box-shadow: 0 0 10px white;
+}
+
+::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background-color: none;
+		border: none;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 10px;
+		background-color: rgba(0,0,0,0);
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(240,240,240,0.8);
+		border: 2px solid rgba(240,240,240,0.8);
+		border-radius: 10px;
+	}
+	
+	
+.closeBtn {
+	background: rgba(255,5,5,0.7);
+	border-radius:2px;
+	color:#ff4e4e;
+	font-family:Arial;
+	font-size:14px;
+	padding: 8px 12px;
+	line-height:25px;
+	text-decoration:none;
+	cursor: pointer;
+	text-shadow:0px 0px 8px #940000;
+	transition: 0.3s;
+	border:1px solid #ff1717;
+}
+.closeBtn:hover {
+	background:#f92828;
+	color:#fff;
+	box-shadow: 0 0 20px rgb(255 0 0 / 70%);
+    text-shadow: 0px 0px 8px #5d0000;
+}
+
+
+
+
+
+
+
+
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+
+
+
+
+
+
+
+
+table {
+  font-family: 'Teko', sans-serif;
+  width: 600px;
+  height: 350px;
+  border-collapse: collapse;
+  position: absolute;
+  top: 34%;
+  left: 40%;
+  background: rgba(50,50,50,0.7);
+}
+
+th {
+	border: 1px solid white;
+	box-shadow: inset 0px 0px 10px white;
+	text-align: center;
+}
+
+td {
+	border: 1px solid white;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+
+
+
+
+
+
+
+

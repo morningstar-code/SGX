@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Fråga om prenumerationen",
+    "modal_buy_subscription": "Är du säker på att du vill köpa en $%s för %s dagar?",
+    "modal_mole_name": "Mol",
+    "target_buy_phone": "Köp Trap-telefon",
+    "modal_buy_phone": "Är du säker på att du vill köpa en Trap-telefon för $%s?",
+    "phone_mole_buy_message": "'up, jag kommer att hålla dig informerad när polisen dyker upp i mitt grannskap. ",
+    "notify_set_waypoint": "Du har ställt in din GPS",
+    "target_retail_sell_drugs": "Starta interaktion",
+    "notify_exit_vehicle": "Du måste lämna fordonet.",
+    "notify_wholesale_info": "Du är väldigt nära mötesplatsen, flyttar du bort - ställer du in mötet.",
+    "notify_wholesale_info2": "Om du drar fram något vapen inom mötesområdet med klienten kommer denne att uppfatta det som ett försök till bluff.",
+    "notify_wholesale_fail_weapon": "Klienten tog det som bedrägeri. ",
+    "target_wholesale_exchange": "Fortsätt med utbytet",
+    "notify_wholesale_fail_drug": "Du har inte tillräckligt med den angivna drogen, klienten tog det som bedrägeri. ",
+    "notify_wholesale_fail_distance": "Du avbröt mötet med klienten, din respekt sjunker med %s.",
+    "notify_wholesale_enemy_dead": "Ta pengarna från klienten innan polisen kommer.",
+    "target_wholesale_steal_money": "Stjäla pengarna",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Mitt folk märkte en polis i grannskapet - på GPS:en har du hans sista koordinater markerade. ",
+        "Våra killar såg en polis i området. ",
+        "Teamet märkte en polis i närheten - hans sista plats är markerad på din GPS. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Sälj droger: Fusk-/glitchförsök från spelaren: %s (ID: %s)",
+    "discord_hacker_title": "%s (ID: %s, medborgar-ID: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** försöker sälja en vara som inte är listad i **config.lua**\n\n",
+    "notify_retail_negotiating": "Det angivna priset är högre eller lika med det du erbjöd tidigare.",
+    "notify_buy_subscription_success": "Du köpte en prenumeration från %s för $%s.",
+    "notify_buy_subscription_success2": "Du hittar information om prenumerationen i Trap Phone på OG-appen.",
+    "discord_buy_subscription_title": "%s (ID: %s, medborgar-ID: %s)",
+    "discord_buy_subscription_message": "**%s** köpte en prenumeration från **%s** giltig till **%s** för beloppet **$%s**",
+    "notify_buy_subscription_fail_money": "Du saknar $%s.",
+    "notify_buy_subscription_fail_respect": "Du saknar %s respektpoäng för att köpa %s prenumeration.",
+    "notify_buy_subscription_fail_active": "Du har redan en aktiv prenumeration med %s.",
+    "notify_buy_phone_success": "Du köpte Trap Phone för $%s.",
+    "notify_buy_phone_fail_money": "Du saknar $%s.",
+    "notify_buy_phone_fail_have": "Du har redan Trap Phone i ditt lager.",
+    "command_selldrugs_description": "Kommando ansvarig för att aktivera/inaktivera drogförsäljning",
+    "command_selldrugs-stats_description": "Med det här kommandot kan du lägga till eller ta bort spelarstatistik i skriptet Advanced Drug Sales (Administratör)",
+    "command_selldrugs-stats_arg1_name": "Spelar-ID",
+    "command_selldrugs-stats_arg1_help": "Ange spelarens ID som du vill utföra åtgärden på",
+    "command_selldrugs-stats_arg2_name": "'Lägg till eller ta bort'",
+    "command_selldrugs-stats_arg2_help": "Välj om du vill lägga till eller subtrahera statistik",
+    "command_selldrugs-stats_arg3_name": "\"respekt\" eller \"sale_skill\"",
+    "command_selldrugs-stats_arg3_help": "Välj den statistik som du vill utföra en åtgärd på",
+    "command_selldrugs-stats_arg4_name": "värde",
+    "command_selldrugs-stats_arg4_help": "Ange värdet som åtgärden ska utföras på",
+    "notify_selldrugs-stats_add": "Du har lagt till %s %s till spelaren %s.",
+    "notify_selldrugs-stats_received": "Du fick %s %s från %s.",
+    "notify_selldrugs-stats_remove": "Du tog bort %s %s från spelaren %s.",
+    "notify_selldrugs-stats_taken": "%s tog bort %s %s från dig.",
+    "notify_retail_fail_police": "Saknar %s tjänstemän för att kunna sälja droger.",
+    "notify_retail_stop": "Du slutade sälja droger.",
+    "notify_retail_start": "Du började sälja droger.",
+    "notify_retail_fail_drugs": "Du har inga droger på dig.",
+    "notify_retail_stop_drugs": "Du har inga droger på dig - försäljningen är över.",
+    "discord_hacker_make_trade_message": "**%s** har inte föremålet de vill sälja eller använder en trigger för att sälja utan föregående förhandling",
+    "notify_retail_sell": "Du sålde %s gram av %s för $%s.",
+    "discord_retail_sell_title": "%s (ID: %s, medborgar-ID: %s)",
+    "discord_retail_sell_message": "**%s** sålde **%s gram** av **%s** för **$%s**",
+    "notify_wholesale_sell": "Du sålde %s gram av %s för $%s.",
+    "discord_wholesale_sell_title": "%s (ID: %s, medborgar-ID: %s)",
+    "discord_wholesale_sell_message": "**%s** sålde **%s gram** av **%s** för **$%s**",
+    "notify_wholesale_attack_fail": "Klienten tog alla dina pengar i ett bedrägeriförsök.",
+    "discrod_wholesale_attack_title": "%s (ID: %s, medborgar-ID: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s blev rånad** under en grossistförsäljning, värde **$%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s stal från en kund** under en grossistförsäljning, värde **$%s**",
+    "notify_wholesale_attack_success": "Du tog $%s från klienten."
+  },
+  "html": {
+    "dialog_inventory_title": "UTRUSTNING",
+    "phone_messages_title": "Meddelanden",
+    "phone_ogApp_title": "OG-appen",
+    "phone_settings_title": "inställningar",
+    "phone_ogApp_respect_title": "Respekt",
+    "phone_ogApp_selling_skill_title": "Säljförmåga",
+    "phone_ogApp_active_subscriptions_title": "Aktiva prenumerationer",
+    "phone_setting_alerts": "Varningar",
+    "phone_setting_alerts_sound": "Varningsljud",
+    "dialog_respect_tooltip": "Respekt: ​​%s / %s",
+    "dialog_sales_skill_tooltip": "Säljkunskaper: %s / %s",
+    "dialog_stranger_title": "FRÄMLING",
+    "notify_input_wrong": "Var god och ange ett giltigt värde.",
+    "notify_inventory_select": "Välj en artikel från ditt lager",
+    "phone_call_stranger_title": "Främling",
+    "phone_call_message_end": "Startade en konversation som varade i %s sekunder",
+    "phone_message_input_drug_amount": "Ange hur mycket...",
+    "phone_message_input_price": "Ställ in ditt pris per enhet...",
+    "phone_alert_player": "Du: %s",
+    "notify_settings_error": "Du måste vänta 5 sekunder innan du ändrar inställningarna igen.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Jag har till salu: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Vad vill du?",
+        "Vad letar du efter?",
+        "Hur kan jag hjälpa dig i detta ögonblick?"
+      ],
+      "dialog_npc_take": [
+        "Okej, jag tar %s stycken av %s. ",
+        "Okej, jag skulle vilja beställa %s enheter av %s. ",
+        "Jag går för %s stycken av %s. "
+      ],
+      "dialog_answer_start_normal": [
+        "Är du sugen på ett äventyr?",
+        "Är du på humör för något spännande?",
+        "Intresserad av att testa något nytt och spännande?"
+      ],
+      "dialog_answer_start_exit": [
+        "Har precis passerat, tack.",
+        "Jag tror faktiskt att jag klarar den här tiden, tack.",
+        "Jag har tänkt om – kanske någon annan gång. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Vilka varor har du att erbjuda idag?",
+        "Kan du visa mig vilka varor som finns att köpa just nu?",
+        "Jag är nyfiken på ditt nuvarande urval. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Vid närmare eftertanke har jag ingenting just nu.",
+        "Egentligen, när jag tänker om, har jag för närvarande inget att erbjuda.",
+        "Jag har precis insett att jag inte har några föremål tillgängliga för tillfället."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Ställ in ditt pris per enhet...",
+        "Priset per vara är...",
+        "Varje enhet kommer att kosta dig..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Låt mig visa dig något annat.",
+        "Vad sägs om att jag presenterar dig för ytterligare en av våra produkter?",
+        "Kanske skulle du vara intresserad av att se en annan vara vi har?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Jag har ändrat mig, säljer den inte idag.",
+        "Jag kommer faktiskt inte sälja den idag.",
+        "Bestämde mig för att inte sälja idag."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Ge mig ett bättre pris, den här passar mig inte.",
+        "Det här priset verkar lite högt. ",
+        "Jag letar efter ett mer rimligt pris. "
+      ],
+      "dialog_npc_noThanks": [
+        "Jag förmedlar det, det verkar inte vara en bra affär.",
+        "Jag tror att jag tackar nej, priset fungerar inte för mig.",
+        "Nej tack, affären är inte riktigt vad jag letar efter."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Din förlust, kanske nästa gång.",
+        "Det är synd. ",
+        "Jag beklagar. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Jag är intresserad av ditt erbjudande. ",
+        "Det här låter bra för mig. ",
+        "Jag godkänner dessa villkor. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Fantastiskt, nöje att göra affärer med dig.",
+        "Utmärkt, jag är glad att vi kunde komma överens.",
+        "Fantastiskt, det har varit ett nöje att arrangera detta med dig."
+      ],
+      "dialog_npc_sellFail": [
+        "Det priset funkar inte för mig. ",
+        "Jag kan inte gå med på det priset. ",
+        "Priset är för högt för mig. "
+      ],
+      "dialog_answer_exit": [
+        "Synd, kanske en annan gång.",
+        "Ledsen att vi inte kunde få det att fungera. ",
+        "Förstått, hoppas vi kan göra affärer någon annan gång."
+      ],
+      "phone_message_accept_offer": [
+        "Okej, jag tar %s kvantiteter.",
+        "Okej, jag är inne på %s enheter.",
+        "Jag går med på att köpa %s belopp."
+      ],
+      "phone_message_gps": [
+        "Visa upp här.",
+        "Möt mig på den här platsen.",
+        "Kom till den angivna adressen."
+      ],
+      "phone_message_no_places": [
+        "Vi kommer dock inte att göra en affär, något gick fel på min sida.",
+        "Tyvärr måste jag backa ur den här affären, det har varit ett problem hos mig.",
+        "Jag har ändrat planerna och kan inte fortsätta med affären, ber om ursäkt för besväret."
+      ],
+      "phone_message_drug_amount": [
+        "Jag har %s kvantiteter.",
+        "Mitt lager är %s enheter.",
+        "Jag håller %s kvantiteter just nu."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Du är rolig, grabben, jag tror att jag skulle behöva så mycket.",
+        "Du måste skoja med den summan.",
+        "Det är bra, men låt oss mena kvantiteten på allvar."
+      ],
+      "phone_message_price_question": [
+        "Hur mycket vill du ha för en kvantitet?",
+        "Vad är priset per enhet?",
+        "Kan du berätta för mig kostnaden för varje kvantitet?"
+      ],
+      "phone_message_price_answer": [
+        "$%s för en kvantitet.",
+        "Priset för varje kvantitet är $%s.",
+        "Varje enhet kommer att kosta dig $%s."
+      ],
+      "phone_message_call": [
+        "Okej, ring mig för mer information.",
+        "Okej, ring mig om det finns mer att diskutera.",
+        "Låter bra. "
+      ],
+      "phone_message_price_fail": [
+        "Till det priset? ",
+        "Det här priset är en deal-breaker för mig. ",
+        "Jag betalar inte så mycket. "
+      ]
+    }
+  }
+}

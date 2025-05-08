@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Kysy tilauksesta",
+    "modal_buy_subscription": "Oletko varma, että haluat ostaa %s $ %s päiväksi?",
+    "modal_mole_name": "Mooli",
+    "target_buy_phone": "Osta Trap-puhelin",
+    "modal_buy_phone": "Haluatko varmasti ostaa Trap-puhelimen hintaan $%s?",
+    "phone_mole_buy_message": "'sup, pidän sinut ajan tasalla, kun poliiseja ilmestyy naapurustooni. ",
+    "notify_set_waypoint": "Olet asettanut GPS:n",
+    "target_retail_sell_drugs": "Aloita vuorovaikutus",
+    "notify_exit_vehicle": "Sinun täytyy poistua ajoneuvosta.",
+    "notify_wholesale_info": "Olet hyvin lähellä kohtaamispaikkaa, jos muutat pois - peruutat kokouksen.",
+    "notify_wholesale_info2": "Jos otat esiin minkä tahansa aseen kokousalueella asiakkaan kanssa, hän näkee sen huijausyrityksenä.",
+    "notify_wholesale_fail_weapon": "Asiakas piti sitä petoksena. ",
+    "target_wholesale_exchange": "Jatka vaihtoa",
+    "notify_wholesale_fail_drug": "Sinulla ei ole tarpeeksi määritettyä lääkettä, asiakas piti sitä petoksena. ",
+    "notify_wholesale_fail_distance": "Peruutit tapaamisen asiakkaan kanssa, kunnioituksesi putoaa %s.",
+    "notify_wholesale_enemy_dead": "Ota rahat asiakkaalta ennen kuin poliisi saapuu paikalle.",
+    "target_wholesale_steal_money": "Varasta rahat",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Ihmiseni huomasivat poliisin naapurustossa - GPS:ssä on hänen viimeiset koordinaatit merkittynä. ",
+        "Kaverimme huomasivat poliisin alueella. ",
+        "Tiimi huomasi poliisin lähellä - hänen viimeinen sijaintinsa on merkitty GPS:ään. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Myy huumeita: Huijaus/huijausyritys pelaajalta: %s (ID: %s)",
+    "discord_hacker_title": "%s (tunnus: %s, kansalaistunnus: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** yrittää myydä tuotetta, jota ei ole luettelossa **config.lua**\n\n",
+    "notify_retail_negotiating": "Annettu hinta on korkeampi tai yhtä suuri kuin aiemmin tarjoamasi hinta.",
+    "notify_buy_subscription_success": "Ostit tilauksen yritykseltä %s hintaan $%s.",
+    "notify_buy_subscription_success2": "Löydät tiedot tilauksesta OG-sovelluksen Trap Phone -sovelluksesta.",
+    "discord_buy_subscription_title": "%s (tunnus: %s, kansalaistunnus: %s)",
+    "discord_buy_subscription_message": "**%s** osti tilauksen alkaen **%s**, joka on voimassa **%s** asti hintaan **$%s**",
+    "notify_buy_subscription_fail_money": "Sinulta puuttuu $%s.",
+    "notify_buy_subscription_fail_respect": "Sinulta puuttuu %s kunnioituspistettä %s-tilauksen ostamiseen.",
+    "notify_buy_subscription_fail_active": "Sinulla on jo aktiivinen tilaus palvelussa %s.",
+    "notify_buy_phone_success": "Ostit Trap Phonen hintaan $%s.",
+    "notify_buy_phone_fail_money": "Sinulta puuttuu $%s.",
+    "notify_buy_phone_fail_have": "Varastossasi on jo Trap Phone.",
+    "command_selldrugs_description": "Lääkemyynnin käyttöön ottamisesta/poistamisesta vastaava komento",
+    "command_selldrugs-stats_description": "Tällä komennolla voit lisätä tai poistaa pelaajatilastoja Advanced Drug Sales -skriptissä (järjestelmänvalvoja)",
+    "command_selldrugs-stats_arg1_name": "Pelaajan tunnus",
+    "command_selldrugs-stats_arg1_help": "Anna sen pelaajan tunnus, jolle haluat suorittaa toiminnon",
+    "command_selldrugs-stats_arg2_name": "\"lisää\" tai \"poista\"",
+    "command_selldrugs-stats_arg2_help": "Valitse, haluatko lisätä vai vähentää tilastoja",
+    "command_selldrugs-stats_arg3_name": "\"respect\" tai \"sale_skill\"",
+    "command_selldrugs-stats_arg3_help": "Valitse tilasto, jolle haluat suorittaa toiminnon",
+    "command_selldrugs-stats_arg4_name": "arvo",
+    "command_selldrugs-stats_arg4_help": "Anna arvo, jolle toiminto tulee suorittaa",
+    "notify_selldrugs-stats_add": "Lisäsit %s %s soittimeen %s.",
+    "notify_selldrugs-stats_received": "Sait %s %s lähettäjältä %s.",
+    "notify_selldrugs-stats_remove": "Otit %s %s pelaajalta %s.",
+    "notify_selldrugs-stats_taken": "%s vei sinulta %s %s.",
+    "notify_retail_fail_police": "%s:lta puuttuu virkamiehiä, jotka voisivat myydä huumeita.",
+    "notify_retail_stop": "Lopetit huumeiden myynnin.",
+    "notify_retail_start": "Aloit myydä huumeita.",
+    "notify_retail_fail_drugs": "Sinulla ei ole huumeita.",
+    "notify_retail_stop_drugs": "Sinulla ei ole huumeita mukanasi - myynti on ohi.",
+    "discord_hacker_make_trade_message": "**%s** ei omista tuotetta, jonka he haluavat myydä, tai hän käyttää laukaisinta myyntiin ilman ennakkoneuvottelua",
+    "notify_retail_sell": "Myit %s grammaa tuotetta %s hintaan $%s.",
+    "discord_retail_sell_title": "%s (tunnus: %s, kansalaistunnus: %s)",
+    "discord_retail_sell_message": "**%s** myyty **%s grammaa** **%s** hintaan **$%s**",
+    "notify_wholesale_sell": "Myit %s grammaa tuotetta %s hintaan $%s.",
+    "discord_wholesale_sell_title": "%s (tunnus: %s, kansalaistunnus: %s)",
+    "discord_wholesale_sell_message": "**%s** myyty **%s grammaa** **%s** hintaan **$%s**",
+    "notify_wholesale_attack_fail": "Asiakas otti kaikki rahasi huijausyrityksessä.",
+    "discrod_wholesale_attack_title": "%s (tunnus: %s, kansalaistunnus: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s ryöstettiin** tukkumyynnin aikana, arvo **$%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s varasti asiakkaalta** tukkumyynnin aikana, arvo **$%s**",
+    "notify_wholesale_attack_success": "Otit asiakkaalta $%s."
+  },
+  "html": {
+    "dialog_inventory_title": "LAITTEET",
+    "phone_messages_title": "Viestit",
+    "phone_ogApp_title": "OG App",
+    "phone_settings_title": "asetukset",
+    "phone_ogApp_respect_title": "Kunnioittaminen",
+    "phone_ogApp_selling_skill_title": "Myyntitaito",
+    "phone_ogApp_active_subscriptions_title": "Aktiiviset tilaukset",
+    "phone_setting_alerts": "Hälytykset",
+    "phone_setting_alerts_sound": "Hälytysääni",
+    "dialog_respect_tooltip": "Kunnioitus: %s / %s",
+    "dialog_sales_skill_tooltip": "Myyntitaidot: %s / %s",
+    "dialog_stranger_title": "MUUKALAINEN",
+    "notify_input_wrong": "Anna kelvollinen arvo.",
+    "notify_inventory_select": "Valitse tuote varastostasi",
+    "phone_call_stranger_title": "Muukalainen",
+    "phone_call_message_end": "Aloitti keskustelun, joka kesti %s sekuntia",
+    "phone_message_input_drug_amount": "Syötä kuinka paljon...",
+    "phone_message_input_price": "Aseta yksikköhintasi...",
+    "phone_alert_player": "Sinä: %s",
+    "notify_settings_error": "Sinun on odotettava 5 sekuntia ennen kuin muutat asetuksia uudelleen.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Minulla on myynnissä: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Mitä haluat?",
+        "Mitä etsit?",
+        "Kuinka voin auttaa sinua tällä hetkellä?"
+      ],
+      "dialog_npc_take": [
+        "Okei, otan %s palaa %s:sta. ",
+        "Selvä, haluaisin tilata %s yksikköä %s. ",
+        "Haen %s palaa %s:sta. "
+      ],
+      "dialog_answer_start_normal": [
+        "Oletko valmis seikkailuun?",
+        "Oletko innostunut jollekin jännittävälle?",
+        "Oletko kiinnostunut kokeilemaan jotain uutta ja jännittävää?"
+      ],
+      "dialog_answer_start_exit": [
+        "Juuri läpi, kiitos.",
+        "Itse asiassa taidan ohittaa tällä kertaa, kiitos.",
+        "Olen miettinyt uudelleen – ehkä joskus toiste. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Mitä tuotteita sinulla on tarjota tänään?",
+        "Voitko näyttää minulle, mitä tuotteita on ostettavissa juuri nyt?",
+        "Olen utelias nykyisestä valinnastasi. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Jälkikäteen ajateltuna minulla ei ole juuri nyt mitään.",
+        "Itse asiassa, kun mietin uudelleen, minulla ei tällä hetkellä ole mitään tarjottavaa.",
+        "Huomasin juuri, että minulla ei ole tällä hetkellä yhtään tuotetta saatavilla."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Aseta yksikköhintasi...",
+        "Tuotteen hinta on...",
+        "Jokainen yksikkö maksaa sinulle..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Anna minun näyttää sinulle jotain muuta.",
+        "Mitä jos esittelen sinulle toisen tuotteemme?",
+        "Ehkä olisit kiinnostunut näkemään erilaisen tuotteemme?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Olen muuttanut mieleni, enkä myy sitä tänään.",
+        "Itse asiassa en myy sitä tänään.",
+        "Päätin olla myymättä tänään."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Anna parempi hinta, tämä ei sovi minulle.",
+        "Tämä hinta näyttää hieman korkealta. ",
+        "Etsin järkevämpää hintaa. "
+      ],
+      "dialog_npc_noThanks": [
+        "Välitän sen eteenpäin, ei vaikuta hyvältä tarjoukselta.",
+        "Taidan kieltäytyä, hinta ei sovi minulle.",
+        "Ei kiitos, kauppa ei ole aivan sitä mitä etsin."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Tappiosi, ehkä ensi kerralla.",
+        "Se on sääli. ",
+        "Ikävä kuulla. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Olen kiinnostunut tarjouksestasi. ",
+        "Tämä kuulostaa minusta hyvältä. ",
+        "Hyväksyn nämä ehdot. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Hienoa, ilo tehdä kauppaa kanssasi.",
+        "Hienoa, olen iloinen, että pääsimme sopimukseen.",
+        "Mahtavaa, on ollut ilo järjestää tämä kanssasi."
+      ],
+      "dialog_npc_sellFail": [
+        "Tuo hinta ei sovi minulle. ",
+        "En voi hyväksyä sitä hintaa. ",
+        "Hinta on liian korkea minulle. "
+      ],
+      "dialog_answer_exit": [
+        "Harmi, ehkä toisen kerran.",
+        "Valitettavasti emme saaneet sitä toimimaan. ",
+        "Ymmärrän, toivottavasti voimme tehdä kauppaa joskus toiste."
+      ],
+      "phone_message_accept_offer": [
+        "Okei, otan %s määrää.",
+        "Selvä, haluan %s yksikköä.",
+        "Suostun ostamaan %s summaa."
+      ],
+      "phone_message_gps": [
+        "Näytä tänne.",
+        "Tavataan tässä paikassa.",
+        "Tule annettuun osoitteeseen."
+      ],
+      "phone_message_no_places": [
+        "Emme kuitenkaan tee sopimusta, jokin meni pieleen minun puolellani.",
+        "Valitettavasti minun täytyy vetäytyä tästä sopimuksesta, sillä minulla on ollut ongelma.",
+        "Olen muuttunut suunnitelmissani, enkä voi jatkaa kauppaa, pahoittelen häiriötä."
+      ],
+      "phone_message_drug_amount": [
+        "Minulla on %s määrää.",
+        "Varastoni on %s yksikköä.",
+        "Pidän tällä hetkellä %s määrää."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Olet hauska, poika, kun luulet tarvitsevani niin paljon.",
+        "Vitsailet varmaan tuolla summalla.",
+        "Se on hyvä, mutta olkaamme tosissaan määrän suhteen."
+      ],
+      "phone_message_price_question": [
+        "Kuinka paljon haluat yhdestä määrästä?",
+        "Mikä on yksikön hinta?",
+        "Voitko kertoa minulle kunkin määrän kustannukset?"
+      ],
+      "phone_message_price_answer": [
+        "$%s yhdelle määrälle.",
+        "Jokaisen määrän hinta on %s $.",
+        "Jokainen yksikkö maksaa %s $."
+      ],
+      "phone_message_call": [
+        "Okei, soita minulle saadaksesi lisätietoja.",
+        "Selvä, soita minulle, jos on muuta keskusteltavaa.",
+        "Kuulostaa hyvältä. "
+      ],
+      "phone_message_price_fail": [
+        "Sillä hinnalla? ",
+        "Tämä hinta on minulle katkaisija. ",
+        "En missään nimessä maksa niin paljon. "
+      ]
+    }
+  }
+}

@@ -1,0 +1,1032 @@
+body {
+    width:  100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 99999999999;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root::-webkit-scrollbar {display:none;margin: 0;}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --input: rgba(103, 146, 255, 0.15);
+    --primary: #6792FF;
+    --background: rgba(9, 8, 20, 0.95);
+
+    --box-deactive: rgba(103, 146, 255, 0.15);
+    --button-deactive: rgba(103, 146, 255, 0.15);
+    --box-active: rgba(103, 146, 255, 0.25);
+    --button-active: rgba(103, 146, 255, 0.25);
+
+    --online: #2FFF8F;
+    --onine-shadow: 0 0 1vh 0 rgba(47, 255, 143, 1);
+
+    --category-active-shadow: 0 0 5vh 2vh rgba(103, 146, 255, 0.25) inset; 
+    --category-active: linear-gradient(90deg, rgba(103, 146, 255, 0.00) 0%, rgba(62, 87, 153, 0.16) 100%);
+    --category-deactive: linear-gradient(90deg, rgba(103, 146, 255, 0.00) 0%, rgba(103, 146, 255, 0.16) 100%);
+
+    --close: #FF2F2F;
+    --close-bg: radial-gradient(84.25% 50% at 50% 50%, rgba(255, 47, 47, 0.17) 0%, rgba(153, 28, 28, 0.17) 100%);
+    --close-shadow: 0 0 5vh 2vh rgba(255, 47, 47, 0.25) inset;
+
+    --badge-darker: #152538;
+    --badge-record-bg: rgba(0, 0, 0, 0.20);
+    --badge-record: #FF2F2F;
+    --badge-record-shadow: 0 0 1vh 0 rgba(255, 47, 47, 1);
+    --badge-record-shadow-2: 0 0 2vh 0 rgba(255, 47, 47, 0.5);
+
+    --frame-gradient: radial-gradient(83.12% 62.36% at 50% 50%, rgba(0, 0, 0, 0.10) 0%, #000 100%);
+    --frame-box: rgba(255, 255, 255, 0.1);
+
+    --text: #FFFFFF;
+    --text-black: rgba(0, 0, 0, 0.45);
+    --text-tertiary: rgba(255, 255, 255, 0.45);
+    --text-secondary: rgba(255, 255, 255, 0.55);
+
+    --video-bg: rgba(0, 0, 0, 0.15);
+}
+
+@font-face {
+    font-family: 'Nekst-Light';
+    src: url(../fonts/Nekst-Light.otf);
+}
+
+@font-face {
+    font-family: 'Nekst-Regular';
+    src: url(../fonts/Nekst-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Nekst-Medium';
+    src: url(../fonts/Nekst-Medium.otf);
+}
+
+@font-face {
+    font-family: 'Nekst-Bold';
+    src: url(../fonts/Nekst-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Nekst-Black';
+    src: url(../fonts/Nekst-Black.ttf);
+}
+
+@font-face {
+    font-family: 'd_kallisto';
+    src: url(../fonts/d_kallisto.otf);
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url(../fonts/Gilroy-Medium.ttf);
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+[data-hide="true"] {
+    display: none;
+    animation: .5s ease-in-out normal fadeout;
+}
+
+[data-hide="false"] {
+    display: flex;
+    animation: .5s ease-in-out normal fadein;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.main {
+    width: 130vh;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5vh;
+    background: var(--background);
+}
+
+.backgrounds {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.backgrounds > svg {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#line1 {
+    width: 70%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#line2 {
+    width: 65%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#teaser {
+    width: 10%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#teaser2 {
+    width: 16%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#horizontalLine1 {
+    position: absolute;
+    left: -32vh;
+    font-size: 11vh;
+    transform: rotate(90deg);
+    font-family: 'Nekst-Bold';
+    background: radial-gradient(424.03% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(153, 153, 153, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#horizontalLine2 {
+    position: absolute;
+    right: -32vh;
+    font-size: 11vh;
+    transform: rotate(90deg);
+    font-family: 'Nekst-Bold';
+    background: radial-gradient(424.03% 50% at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(153, 153, 153, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-container {
+    width: 100%;
+    height: 100%;
+    padding: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.left-wrapper {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1vh;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.header > span:first-child {
+    font-family: 'Nekst-Black';
+    text-transform: uppercase;
+    font-size: 3.5vh;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+    color: var(--primary);
+}
+
+.header > span:last-child {
+    font-family: 'Nekst-Regular';
+    text-transform: uppercase;
+    font-size: 1.25vh;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+    color: var(--text-secondary);
+    letter-spacing: .5vh;
+}
+
+.search {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+#search {
+    width: 100%;
+    height: 4vh;
+    padding-left: 2vh;
+    background: var(--input);
+
+    font-family: 'Nekst-Regular';
+    font-size: 1.25vh;
+    color: var(--text-tertiary);
+
+    border: none;
+    outline: none;
+    border-radius: .5vh;
+}
+
+.right-wrapper {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.search-icon {
+    width: 3vh;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5vh;
+    background: var(--primary);
+    position: absolute;
+    right: .5vh;
+}
+
+#icon {
+    font-size: 1.5vh;
+    color: var(--text-black);
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+    margin: 0;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: .5vh;
+}
+
+.list::-webkit-scrollbar-track {
+    background: var(--box-deactive);
+    border-radius: .5vh;
+}
+
+.cam {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5vh;
+    border-radius: .5vh;
+    justify-content: space-between;
+    background: var(--box-deactive);
+    transition: .1s ease-in-out;
+    margin-block-end: 1.75vh;
+}
+
+.cam:first-child {
+    margin-block-start: .5vh;
+
+}
+
+.cam-pp {
+    width: 4vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cam-pp > img {
+    width: 8vh;
+    object-fit: contain;
+}
+
+.cam-name {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cam-icon {
+    width: 3vh;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+.cam-icon > img {
+    width: 3.5vh;
+    object-fit: contain;
+    position: absolute;
+}
+
+.cam-icon > #icon {
+    font-size: 1.5vh;
+    color: var(--text);
+}
+
+.cam-name, .cam-rank {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vh;
+}
+
+.cam-names {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cam-names > span:first-child {
+    font-family: 'Nekst-Medium';
+    font-size: 1.25vh;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.cam-names > span:last-child {
+    font-family: 'Nekst-Regular';
+    font-size: 1.5vh;
+    color: var(--text-secondary);
+}
+
+.cam:hover > .cam-name > .cam-names > span:last-child {
+    color: var(--text);
+}
+
+.cam:hover > .cam-rank > .cam-names > span:last-child {
+    color: var(--text);
+}
+
+.cam:hover > .watch-cam > span {
+    color: var(--text);
+}
+
+
+
+.watch-cam {
+    width: fit-content;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--button-deactive);
+    padding: 2vh;
+    border-radius: .5vh;
+    transition: .15s ease-in-out;
+}
+
+.watch-cam > span {
+    font-family: 'Nekst-Regular';
+    font-size: 1.5vh;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.cam:hover {
+    border: .15vh solid var(--primary);
+    background: var(--box-active);
+}
+
+.cam:hover > .watch-cam {
+    background: var(--button-active);
+}
+
+.watch-cam:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.watch-cam:active {
+    transform: scale(1);
+}
+
+.categorys {
+    width: 100%;
+    height: 53%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-block-start: .5vh;
+}
+
+.category {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--category-deactive);
+    border-radius: .5vh;
+    padding: 1.5vh;
+    gap: 2vh;
+    transition: .1s ease-in-out;
+    margin-block-end: 1.75vh;
+}
+
+.category.active {
+    background: var(--category-active);
+    box-shadow: var(--category-active-shadow);
+    border: .15vh solid var(--primary);
+}
+
+.category-iconbox {
+    width: 5vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--box-deactive);
+    border-radius: .5vh;
+}
+
+.category-iconbox > img {
+    width: 4vh;
+    object-fit: contain;
+}
+
+.category-name {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.category-name > span:first-child {
+    font-family: 'Nekst-Regular';
+    font-size: 1.25vh;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.category-name > span:last-child {
+    font-family: 'Nekst-Regular';
+    font-size: 1.5vh;
+    color: var(--text);
+    text-transform: capitalize;
+
+}
+
+.category-divider {
+    width: .2vw;
+    height: 70%;
+    border-radius: .5vh;
+    background: var(--box-deactive);
+}
+
+.category-online {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+.category-online > span {
+    font-family: 'Nekst-Regular';
+    font-size: 1.75vh;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.online-circle {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background: var(--online);
+    box-shadow: var(--onine-shadow);
+}
+
+.category:hover {
+    background: var(--category-active);
+    box-shadow: var(--category-active-shadow);
+    border: .15vh solid var(--primary);
+    cursor: pointer;
+}
+
+.category:active {
+    transform: scale(0.98);
+}
+
+.player-informations {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5vh;
+}
+
+.player-informations > .cam-name {
+    width: fit-content;
+}
+
+.player-informations > .cam-rank {
+    width: fit-content;
+}
+
+
+.close-menu {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: .75vh;
+    margin-block-start: 1vh;
+    background: var(--close-bg);
+    transition: .15s ease-in-out;
+    position: relative;
+}
+
+.close-menu:active {
+    transform: scale(0.98);
+}
+
+.close-menu:hover {
+    cursor: pointer;
+    border: .15vh solid var(--close);
+    box-shadow: var(--close-shadow);
+}
+
+#title {
+    font-family: 'Nekst-Regular';
+    font-size: 1.25vh;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+#subtitle {
+    font-family: 'Nekst-Regular';
+    font-size: 1.5vh;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.close-menu:hover > #title {
+    color: var(--text);
+}
+
+.close-menu:hover > #subtitle {
+    color: var(--text);
+}
+
+.close-menu > #icon {
+    position: absolute;
+    left: 4vh;
+    color: var(--close);
+    opacity: .25;
+}
+
+.close-menu > #icon2 {
+    position: absolute;
+    right: 4vh;
+    color: var(--close);
+    opacity: .25;
+}
+
+.close-menu:hover > #icon {
+    opacity: 1;
+}
+
+.close-menu:hover > #icon2 {
+    opacity: 1;
+}
+
+.card {
+    min-width: 50vh;
+    width: fit-content;
+    height: 16vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .75vh;
+    padding: .75vh;
+    background: var(--badge-darker);
+    position: absolute;
+    top: 2vh;
+    z-index: 5;
+}
+
+.card.left {
+    left: 2vh;
+}
+
+.card.right {
+    right: 2vh;
+}
+
+.card-backgrounds {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.card-backgrounds > img {
+    width: 60%;
+    position: absolute;
+    right: -3vh;
+    bottom: -5.5vh;
+    opacity: .15;
+    pointer-events: none;
+}
+
+.card-informations {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.25vh;
+    flex-direction: column;
+    border-radius: .5vh;
+    border: .15vh solid var(--primary);
+    gap: 1vh;
+    z-index: 1;
+}
+
+.card-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vh;
+}
+
+.card-header > span {
+    font-family: 'd_kallisto';
+    text-transform: uppercase;
+    font-size: 1.75vh;
+    color: var(--text);
+}
+
+.recording-state {
+    width: fit-content;
+    height: fit-content;
+    padding: .75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .25vh;
+    background: var(--badge-record-bg);
+    gap: 1vh;
+}
+
+.recording-state > span {
+    font-family: 'd_kallisto';
+    font-size: 1.5vh;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.recording-circle {
+    width: 1.25vh;
+    height: 1.25vh;
+    border-radius: 50%;
+    background: var(--badge-record);
+    box-shadow: var(--badge-record-shadow);
+    animation: 2s ease-in-out normal heartbeat infinite;
+}
+
+.card-ligt {
+    width: 30vh;
+    height: 15vh;
+    position: absolute;
+    border-radius: 50%;
+    background: none;
+    box-shadow: 0 0 25vh .5vh var(--primary);
+    bottom: -15vh;
+    right: 0;
+}
+
+.card-info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-info > span {
+    font-size: 1.5vh;
+    font-family: 'Gilroy-Medium';
+    text-transform: capitalize;
+    color: var(--text);
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: var(--badge-record-shadow-2);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.camframe {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    padding: 2vh;
+    background: var(--frame-gradient);
+}
+
+.frames {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#l-t {
+    width: 10vh;
+    position: absolute;
+    left: 2vh;
+    top: 2vh;
+}
+
+#l-b {
+    width: 10vh;
+    position: absolute;
+    left: 2vh;
+    bottom: 2vh;
+}
+
+#center {
+    width: 95%;
+    opacity: .5;
+}
+
+#r-t {
+    width: 10vh;
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+}
+
+#r-b {
+    width: 10vh;
+    position: absolute;
+    right: 2vh;
+    bottom: 2vh;
+}
+
+.cam-wrapper {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    left: 4vh;
+    top: 4vh;
+    gap: 1.5vh;
+}
+
+.cam-wrapper span {
+    font-family: 'd_kallisto';
+}
+
+.cam-box {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1vh;
+    border: .15vh solid var(--frame-box);
+    gap: 1vh;
+}
+
+.cam-box > span {
+    font-size: 2vh;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.cam-box > #title {
+    font-size: 1.25vh;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.cam-box > #subtitle {
+    font-size: 1.75vh;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.cam-box.direction {
+    gap: unset;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.cam-box.icon {
+    position: absolute;
+    bottom: 4vh;
+    left: 4vh;
+}
+
+.cam-box-texts {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.cam-box-texts > #title {
+    font-size: 1.25vh;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.cam-box-texts > #subtitle {
+    font-size: 1.75vh;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.cam-keys {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;   
+    padding: 1vh;
+    position: absolute;
+    right: 4vh;
+    bottom: 4vh;
+}
+
+.cam-keys > .cam-box {
+    justify-content: flex-end;
+}
+
+.cam-keys > .cam-box > span {
+    font-size: 1.25vh;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-family: 'd_kallisto';
+}
+
+.cam-keys > .cam-box > #icon {
+    color: var(--text-secondary);
+}
+
+.watch-video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    backdrop-filter: blur(1.5vh);
+    background: var(--video-bg);
+}
+
+.video {
+    width: fit-content;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--video-bg);
+    overflow: hidden;
+    border-radius: .75vh;
+}
+
+.video > video {
+    width: 100%;
+    height: 100%;
+    border-radius: .75vh;
+}
+
+#close {
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+    z-index: 11;
+    font-size: 2.25vh;
+    color: var(--primary);
+    transition: .15s ease-in-out;
+}
+
+#close:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#close:active {
+    transform: scale(1);
+}

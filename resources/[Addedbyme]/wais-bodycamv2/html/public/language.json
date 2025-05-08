@@ -1,0 +1,27 @@
+{
+    "header": {
+        "bodyListTitle": "Lista de Cámaras Corporales",
+        "bodyListSubtitle": "Aquí puedes ver todas las cámaras corporales",
+
+        "dashListTitle": "Lista de Cámaras del Tablero",
+        "dashListSubtitle": "Aquí puedes ver todas las cámaras del tablero",
+
+        "recordListTitle": "Lista de Grabaciones",
+        "recordListSubtitle": "Aquí puedes ver todas las grabaciones"
+    },
+
+    "search": "Buscar por nombre",
+    "grade": "Rango",
+    "name": "Nombre",
+    "date": "Fecha",
+    "watch": "Ver",
+    "category": "Categoría",
+    "bodycams": "Cámaras Corporales",
+    "dashcams": "Cámaras de Tablero",
+    "records": "Grabaciones",
+    "close": "Cerrar menú",
+    "recording": "GRABANDO",
+    "live": "EN VIVO",
+    "location": "Ubicación",
+    "exitcam": "Backspace / Salir de la cámara"
+}

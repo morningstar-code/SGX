@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sgx-fuel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="app" class="overflow-hidden">
+        <transition name="menu">
+            <div class="fuelContainer" v-show="menuOpened" v-bind:style="{opacity: menuOpened ? 1 : 0}">
+
+                <div class="w-[90%] h-[10%] flex justify-between items-center">
+                    <div class="w-[15%] h-[80%] ml-[2.1vw] mt-[1vw] flex items-center justify-center">
+                        <img src="./images/logo.png" class="w-[20%] h-[64%]">
+                        <p class="ml-[1.11vw]" style="font-size: .85vw; color: #fff;">{{Locales['MENU_NAME']}}</p>
+                    </div>
+                    <div class="w-[25%] h-[90%] flex justify-between items-center">
+                        <div class="w-[70%] h-[80%] mt-2 flex">
+                            <div class="w-full h-[80%]  flex items-end justify-center text-center">
+                                <p style="color: #fff; font-family: Helvetica; font-size: .8vw;">{{currentDateTime}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-[2.1%] flex"></div>
+                <div class="w-full h-[81.9%] flex relative">
+                    <div class=" w-[29.7%] h-[98.8%] flex flex-col top-0 ml-[3.8542vw] items-center relative" id="firstdiv" style="border-radius: 1.5vw;">
+                        <div class="w-full h-[10%] flex flex-col">
+                            <div class="w-full h-[5%]"></div>
+                            <div class="w-full h-[48%] items-center justify-center relative">
+                                 <p class="flex absolute bottom-0 ml-[1.0417vw]" style="color: #FFF; font-size: .7813vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['MODEL']}}: {{vehicleInfo.name}}</p>
+                            </div>
+                            <div class="w-full h-[42%] items-center justify-center relative">
+                                 <p class="flex absolute top-[0] ml-[1.0417vw]" style="color: #66676D; font-size: .5208vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['CAR_PLATE']}}: <span style="color: #FFF;">{{vehicleInfo.plate}}</span></p>
+                            </div>
+                            <div class="w-full h-[5%]"></div>
+                        </div>
+                        <div class="w-full h-[3%] flex"></div>
+                        <div class="w-full h-[25%] flex items-center justify-center">
+                            <img :src="vehicleInfo.photo" class="w-full h-full flex items-center justify-center" style="object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;">
+                        </div>
+                        <div class="w-full absolute top-[10vw] h-[4vw] flex justify-center items-center">
+                            <img class="vehicleBottom" src="./images/vehicle-bottom.png" alt="">
+                        </div>
+                        <div class="h-[9%]">
+    
+                        </div>
+                        <div class="relative w-full h-[35%] flex items-center justify-center">
+                            <div id="fuelChart" class="w-[10.729vw] h-[10.729vw] rounded-full flex items-center justify-center flex-col"></div>
+                            <div class="absolute">
+                                <img src="./images/fuelIcon.png" class="w-[2.604vw] h-[1.374vw]">
+                                <p style="font-size: 1.3vw; font-family: Helvetica; color: #fff; margin-top: 0.2vw;">{{vehicleInfo.fuelLevel}}%</p>
+                            </div>
+                        </div>
+                        <div class="w-full ml-[.0521vw] h-[17%]  flex items-center justify-between">
+                            <div class="w-[45%] h-full flex items-center justify-center">
+                                <div class="w-[80%] ml-[.625vw] h-[80%]  flex flex-col">
+                                    <div class="w-full h-[50%] flex items-center justify-between">
+                                        <div class="w-[100%] h-full flex items-center justify-center">
+                                            <img class="w-[1.6667vw] h-[1.6667vw] ml-[.625vw] mt-[.1042vw]" src="./images/engine-icon.png" style="object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;"  alt="engine">
+                                            <p class="flex mt-[.2604vw] ml-[.5vw]" style="color: #66676D; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['TEMP']}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full ml-[1vw] h-[50%] flex items-center justify-center">
+                                        <h1 class="mr-[.2083vw] flex color-white" style="color: white; font-size: 1.0417vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;" >{{vehicleInfo.engineTemperature}}C°</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-[10%] h-full flex items-center justify-center">
+                                <div class="w-[.0521vw] h-[65%] mb-[.2083vw] flex bg-[#66676D]" style="border-radius: .7813vw;"></div>
+                            </div>
+                            <div class="w-[45%] h-full flex items-center justify-center">
+                                <div class="w-[80%] mr-[.625vw] h-[80%] flex flex-col">
+                                    <div class="w-full h-[50%] flex items-center justify-between">
+                                        <div class="w-[100%] h-full flex items-center justify-center">
+                                            <img class="w-[1.6667vw] h-[1.6667vw] mt-[.1042vw]" src="./images/speed-icon.png" style=" object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;"  alt="speed">
+                                            <p class="flex mt-[.2604vw] ml-[.5vw]" style="color: #66676D; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['SPEED']}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full ml-[.3vw]  h-[50%] flex items-center justify-center">
+                                        <h1 class="flex color-white" style="color: white; font-size: 1.0417vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;" >{{vehicleInfo.maxSpeed}} {{defaultInfo.speedUnit}}</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[55.5%] h-[77.5%] block 1 right-0 ml-[1.5vw] float-left" id="rightdiv"  style="border-radius: 1.5vw;">
+                        <div class="w-full h-[12%] mt-[.3125vw] flex items-center">
+                            <h1 class="ml-[1.6vw] flex color-white" style="color: white; font-size: 1.25vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;" >{{Locales['FUEL_TYPE']}}</h1>
+                        </div>
+                        <div class="w-full h-[86.5%] flex items-center justify-center mt-[.2083vw]">
+                            <div class="w-[91%] h-[81%] flex mb-[1.0417vw] relative" style="z-index: 2000;">
+                                <div class="w-[48.8%] h-[46.5%]" id="onediv" style="border-radius: .7vw;">
+                                    <div class="w-full h-[45%] flex justify-between items-center">
+                                        <div class="w-[20%] h-[78%] ml-[1.0417vw] mt-[.8333vw] bg-no-repeat bg-[url('images/gasicon.png')]" style=" object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;"></div>
+                                        <div class="w-[65%] h-[80%] mt-[.8333vw] flex flex-col">
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mt-[.2083vw] mr-[.78vw]" style="color: white; font-size: 1.0417vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{this.fuelPrices['DIESEL']}}{{Locales['CURRENCY']}} / {{Locales['LITER']}}</p>
+                                            </div>
+                                            <div class="w-full h-[50%] flex  items-center justify-end">
+                                                <p class="color-white flex mr-[.78vw]" style="color: #66676D; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['DIESEL']}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-[10%]"></div>
+                                    <div class="w-full h-[45%] flex items-end justify-center">
+                                        <div class="w-[80%] h-[40%] flex mb-[.625vw]">
+                                            <input id="input1" min="0" max="100" type="range" v-model="diesel" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-[4%] h-[100%]"></div>
+                                <div class="w-[48.8%] h-[46.5%]" id="twodiv" style="border-radius: .7vw;">
+                                    <div class="w-full h-[45%] flex justify-between items-center">
+                                        <div class="w-[20%] h-[80%] ml-[1.0417vw] mt-[.8333vw]" style="background-image: url(images/gasicon.png);  object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;"></div>
+                                        <div class="w-[65%] h-[80%] mt-[.8333vw] flex flex-col">
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mt-[.2083vw] mr-[.78vw]" style="color: white; font-size: 1.0417vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{this.fuelPrices['ECONOMIC']}}{{Locales['CURRENCY']}} / {{Locales['LITER']}}</p>
+                                            </div>
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mr-[.78vw]" style="color: #66676D; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['ECONOMIC']}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-[10%]"></div>
+                                    <div class="w-full h-[45%] flex items-end justify-center">
+                                        <div class="w-[80%] h-[40%] flex mb-[.625vw]">
+                                            <input id="input2" min="0" max="100" type="range" v-model="economic"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-[48%] h-[46.5%] bottom-[.1042vw] left-0 absolute" id="threediv" style="border-radius: .7vw;">
+                                    <div class="w-full h-[45%] flex justify-between items-center">
+                                        <div class="w-[20%] h-[79%] ml-[1.0417vw] mt-[.8333vw]" style="background-image: url(images/gasicon.png);  object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;"></div>
+                                        <div class="w-[65%] h-[80%] mt-[.8333vw] flex flex-col">
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mt-[.2083vw] mr-[.78vw]" style="color: white; font-size: 1.0417vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{this.fuelPrices['SUPER']}}{{Locales['CURRENCY']}} / {{Locales['LITER']}}</p>
+                                            </div>
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mr-[.78vw]" style="color: #66676D; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['SUPER']}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-[10%]"></div>
+                                    <div class="w-full h-[45%] flex items-end justify-center">
+                                        <div class="w-[80%] h-[40%] flex mb-[.625vw]">
+                                            <input id="input3" min="0" max="100" type="range" v-model="superNormal" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-[48.2%] h-[46.5%] bottom-[.1042vw] right-0 absolute" id="fourdiv" style="border-radius: .7vw;">
+                                    <div class="w-full h-[45%] flex justify-between items-center">
+                                        <div class="w-[20%] h-[79%] ml-[1.0417vw] mt-[.8333vw]" style="background-image: url(images/gasicon.png);  object-fit: contain; background-repeat: no-repeat; background-size: 100% 100%;"></div>
+                                        <div class="w-[65%] h-[80%] mt-[.8333vw] flex flex-col">
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mt-[.2083vw] mr-[.78vw]" style="color: white; font-size: 1.0417vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{this.fuelPrices['ECONOMIC']}}{{Locales['CURRENCY']}} / {{Locales['LITER']}}</p>
+                                            </div>
+                                            <div class="w-full h-[50%] flex items-center justify-end">
+                                                <p class="color-white flex mr-[.78vw]" style="color: #66676D; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['SUPER_P']}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-[10%]"></div>
+                                    <div class="w-full h-[45%] flex items-end justify-center">
+                                        <div class="w-[80%] h-[40%] flex mb-[.625vw]">
+                                            <input id="input4" min="0" max="100" type="range" v-model="superPlus" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[55.5%] h-[18.2%] flex absolute right-0 mr-[3.4vw] bottom-[.4167vw] float-left justify-between" id="bottomdiv" style="border-radius: 1.5vw;">
+                        <div class="w-[33%] h-full flex items-baseline justify-center flex-col">
+                            <div class="w-[70%] h-[40%] relative flex items-center justify-center">
+                                <p class="flex absolute bottom-[.5208vw]" style="color: #66676D; font-size: .5208vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['TOTAL_PRICE']}}</p>
+                            </div>
+    
+                            <div class="w-full h-[60%] flex items-center justify-start">
+                                <p class="flex  ml-[2vw]" style="color: #FFF; font-size: 1.875vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['CURRENCY']}} {{fuelPrice}}</p>
+                            </div>
+                           
+                        </div>
+                        <div class="w-[33%] h-full flex  items-center justify-center flex-col">
+                            <div class="w-full h-[10%]"></div>
+                            <div class="w-full h-[30%] flex items-center text-center justify-center">
+                                <p class="flex ml-[.5208vw]" style="color: #66676D; font-size: .5208vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['PAYMENT_METHOD']}}</p>
+                            </div>
+                            <div class="w-full h-[60%] flex items-center justify-center relative">
+                                <div class="w-[54%] h-[55%] flex bg-[#111] ml-[1.0417vw] absolute bottom-[1.0417vw]" style="border-radius: 5.2083vw">
+                                    <div  class="flex items-center justify-center w-[50%] cursor-pointer"  :style="{ background: selectedPaymentMethod === 'cash' ? '#fff' : 'none', borderRadius: selectedPaymentMethod === 'cash' ? '100px' : '5.2083vw' }" @click="selectPaymentMethod('cash')">
+                                        <img :src="selectedPaymentMethod === 'cash' ? './images/payment-cash-selected.png' : './images/payment-cash.png'" alt="">
+                                    </div>
+                                    <div class="flex items-center justify-center w-[50%] cursor-pointer"  :style="{ background: selectedPaymentMethod === 'bank' ? '#fff' : 'none', borderRadius: selectedPaymentMethod === 'bank' ? '100px' : '5.2083vw' }" @click="selectPaymentMethod('bank')" >
+                                        <img :src="selectedPaymentMethod === 'bank' ? './images/payment-bank-selected.png' : './images/payment-bank.png'" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[33%] h-full flex items-center justify-center flex-col">
+                            <div class="w-full h-[10%]"></div>
+                            <div class="w-full h-[30%] flex items-center text-center justify-center">
+                                <p class="flex ml-[.5208vw]" style="color: #66676D; font-size: .5208vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['PAYMENT_BUTTON']}}</p>
+                            </div>
+                            <div class="w-full h-[60%] flex items-center justify-center relative">
+                                <div class="w-[56%] h-[55%] flex right-[1.3542vw] absolute bottom-[1.0417vw] border text-center justify-center items-center cursor-pointer" id="paymentbtn" style="border-radius: 5.2083vw;" @click="purchaseFuel()">
+                                    <span class="flex color-white" style="color: white; font-size: .625vw; font-style: normal; font-weight: 400; font-family: Helvetica; text-transform: uppercase;">{{Locales['PURCHASE']}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </div>
+</body>
+<script src="./js/progressbar.js"></script>
+<script src="./js/main.js"></script>
+</html>

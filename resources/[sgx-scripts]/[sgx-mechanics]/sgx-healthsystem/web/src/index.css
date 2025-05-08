@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Agency FB'), url('AGENCYB.woff') format('woff');
+}
+
+@font-face {
+    font-family: Gilroy-Light;
+    font-style: normal;
+    font-weight: normal;
+    src: url(assets/fonts/Gilroy-Light.otf);
+}
+
+@font-face {
+    font-family: Gilroy-Regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url(assets/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    font-style: normal;
+    font-weight: normal;
+    src: url(assets/Gilroy-Medium.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    font-style: normal;
+    font-weight: normal;
+    src: url(assets/Gilroy-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    font-style: normal;
+    font-weight: normal;
+    src: url(assets/Gilroy-Bold.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

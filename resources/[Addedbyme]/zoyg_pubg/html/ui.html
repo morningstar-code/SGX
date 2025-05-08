@@ -1,0 +1,242 @@
+
+<html>
+	<head>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="script.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Karantina&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+        <title>Zoygkos PUBG</title>
+		
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+	</head>
+	<body>	
+		<center>
+			<div id="pubgmenu" class="pubgmenu">
+				
+				<div class="statusmenu1" >
+					<span style="color: white; font-family: 'PT Sans', sans-serif; font-size: 14px; position: absolute; top: 9%; left: 5%;">STATUS:</span>
+					<div id="status1" class="status1">-</div>
+					<span style="color: white; font-family: 'PT Sans', sans-serif; font-size: 14px; position: absolute; top: 50%; left: 5%;">PLAYERS:</span>
+					<div id="players1" class="players1"><span id="playersin">0</span>/<span id="maxplayers">10</span></div>
+				</div>
+				<button class="startButton" onclick="joinGame()">START</button>
+				<div id="slider">
+					<figure>
+						<img src="./images/slide1.png">
+						<img src="./images/PUBGSKYDIVE.png">
+						<img src="./images/buggy.png">
+						<img src="./images/pubggun.png">
+						<img src="./images/slide1.png">
+					</figure>
+				</div>
+
+			</div>
+			<div id="pubgstoremenu" class="pubgstoremenu">
+				<div id="productstore" class="productstore">
+					<div class="productplus">
+						<img class="productplus-img" src="nui://esx_inventoryhud/html/img/items/WEAPON_PISTOL.png"/><br/>
+						<span class="productplus-name">PISTOL</span><br/>
+						<button class="productplus-preview">PREVIEW</button>
+					</div>	
+				</div>
+				<div id="previewstore" class="previewstore">
+					<center><img src="nui://esx_inventoryhud/html/img/items/WEAPON_CARBINERIFLE.png"/></center>
+			
+			
+					<div class="bp-pointstobuy">
+						<img class="bp-pointstobuy-img" src="./images/bpcoin.png"/>
+						<div class="bp-pointstobuy-name">1000</div>
+					</div>
+					<div style="position: absolute;left:450px; bottom: 15px;cursor: pointer;">
+						<button id="weaponBuy" class="productplus-preview-buy">BUY WEAPON</button>
+					</div>
+				</div>
+			</div>
+			<div id="statisticmenu" class="statisticmenu">
+				<div style="display: none; position:absolute; top:34%; left:40%; height: 350px; width:200px; background: rgba(50,50,50,0.7); border: 2px solid rgba(150,150,150,0.7); ">
+					<span style="font-family: 'Teko'; font-size: 50px; text-align: center; color: white; text-shadow: 0px 0px 10px white; "><b>Rank</b></span>
+					<p><img src="./images/Rank-Unranked.png" /></p>
+					<span style="font-family: 'Teko'; font-size: 40px; text-align: center; color: rgb(235, 176, 20); text-shadow: 0px 0px 10px rgb(235, 176, 20); "><b>Unranked</b></span><br/>
+					<span style="font-family: 'Teko'; font-size: 20px; text-align: center; color: white; text-shadow: 0px 0px 10px white; ">0/10 games played</span><br/>
+
+						<img style="position:absolute; left: 1%; top: 77%; width: 40px; height: 40px; " src="./images/Rank-Unranked.png"/>
+						<div style=" text-align: left;  width: 60%; height:15px; background:rgba(150,150,150,0.7);"><div style="text-align: left;width: 60%; height:15px; background:rgb(235, 176, 20); box-shadow: 0px 0px 10px rgb(235, 176, 20);"></div></div>
+						<img style="position:absolute; top: 77%; left: 79%;width: 40px; height: 40px;" src="./images/Rank-Bronze.png"/>
+
+				</div>
+				<div style="position:absolute;display: none; top:34%; left:52.5%; height: 100px; width:400px; background: rgba(50,50,50,0.7); border: 2px solid rgba(150,150,150,0.7); ">
+					<div style="font-family: 'Karantina'; font-size: 50px; color: white; text-shadow: 0px 0px 10px white; ">Wins</div>
+					<div style="font-family: 'Teko'; font-size: 40px; color: rgb(235, 176, 20); text-shadow: 0px 0px 10px rgb(235, 176, 20); ">0</div>
+				</div>
+				<div style="position:absolute; display:none; top:45.5%; left:52.5%; height: 100px; width:400px; background: rgba(50,50,50,0.7); border: 2px solid rgba(150,150,150,0.7); ">
+					<div style="font-family: 'Karantina'; font-size: 50px; color: white; text-shadow: 0px 0px 10px white; ">Kills</div>
+					<div style="font-family: 'Teko'; font-size: 40px; color: rgb(235, 176, 20); text-shadow: 0px 0px 10px rgb(235, 176, 20); ">0</div>
+				</div>
+				<div style="position:absolute; display: none;top:57%; left:52.5%; height: 100px; width:400px; background: rgba(50,50,50,0.7); border: 2px solid rgba(150,150,150,0.7); ">
+					<div style="font-family: 'Karantina'; font-size: 50px; color: white; text-shadow: 0px 0px 10px white; ">Games Played</div>
+					<div style="font-family: 'Teko'; font-size: 40px; color: rgb(235, 176, 20); text-shadow: 0px 0px 10px rgb(235, 176, 20); ">0</div>
+				</div>
+				
+				<table style="display: none;">
+					<tr style="border: 2px solid white;">
+						<th style="width: 8%; font-size: 22px; color: rgb(235, 176, 20);text-shadow: 0px 0px 10px rgb(235, 176, 20);"><b>TOP 10</b></th>
+						<th  style="width: 67%;font-size: 22px;color: rgb(235, 176, 20);text-shadow: 0px 0px 10px rgb(235, 176, 20);"><b>NAME</b></th>
+						<th  style="width: 25%;font-size: 22px;color: rgb(235, 176, 20);text-shadow: 0px 0px 10px rgb(235, 176, 20);"><b>WINS</b></th>
+					  </tr>
+					  <tr>
+						<td><img src="./images/first.png"></img></td>
+						<td>Maria Anders</td>
+						<td>11</td>
+					  </tr>
+					  <tr>
+						<td><img src="./images/second.png"></img></td>
+						<td>Francisco Chang</td>
+						<td>9</td>
+					  </tr>
+					  <tr>
+						<td><img src="./images/third.png"></img></td>
+						<td>Roland Mendel</td>
+						<td>8</td>
+					  </tr>
+					  <tr>
+						<td>4</td>
+						<td>Helen Bennett</td>
+						<td>7</td>
+					  </tr>
+					  <tr>
+						<td>5</td>
+						<td>Yoshi Tannamuri</td>
+						<td>6</td>
+					  </tr>
+					  <tr>
+						<td>6</td>
+						<td>Giovanni Rovelli</td>
+						<td>5</td>
+					  </tr>
+					  <tr>
+						<td>7</td>
+						<td>Giovanni Rovelli</td>
+						<td>4</td>
+					  </tr>
+					  <tr>
+						<td>8</td>
+						<td>Giovanni Rovelli</td>
+						<td>3</td>
+					  </tr>
+					  <tr>
+						<td>9</td>
+						<td>Giovanni Rovelli</td>
+						<td>2</td>
+					  </tr>
+					  <tr>
+						<td>10</td>
+						<td>Giovanni Rovelli</td>
+						<td>1</td>
+					  </tr>
+				</table>
+			</div>
+			<div id="settingsmenu" class="settingsmenu">
+				<table style="position:absolute; width: 400px; top: 30%; left: 25%; background: none;">
+					<tr>
+						<th style="text-align: left;font-size: 70px;border-bottom:1px solid white;border-right: none;border-top: none; border-left: none; box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">GAME SETTINGS</th>
+					</tr>	
+					<tr>
+						<td style="text-align: left;font-size: 30px;border-bottom:none; border-top:1px solid white;border-right: none; border-left: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Game Type</td>
+						<td style="text-align: right;font-size: 30px;border-bottom:none;border-top:1px solid white;border-right: none; border-left: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);">SOLO</td>
+					  </tr>
+					  <tr>
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Max Players</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="cmp">123</span></td>
+					  </tr>
+					  <tr>
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Minimun Players To Start</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="cmpts">300</span></td>
+					  </tr>
+					  <tr>
+
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Max Game Time</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="cttsg">300</span> sec.</td>
+					  </tr>
+					  <tr>
+
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Spawn Vehicles</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="csv">ON</span></td>
+					  </tr>
+				</table>
+				<table style="position:absolute; width: 400px; top: 30.2%;height: 280px; left: 50%; background: none;">
+					<tr>
+						<th style="text-align: left;font-size: 70px;border-bottom:1px solid white;border-right: none;border-top: none; border-left: none; box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">INFO</th>
+					</tr>	
+					<tr>
+						<td style="text-align: left;font-size: 30px;border-bottom:none; border-top:1px solid white;border-right: none; border-left: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">BP per Win</td>
+						<td style="text-align: right;font-size: 30px;border-bottom:none;border-top:1px solid white;border-right: none; border-left: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="bppw">100</span></td>
+					  </tr>
+					  <tr>
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">BP per Kill</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="bppk">10</span></td>
+					  </tr>
+					  <tr>
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Rank Points per Win</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="rppw">100</span></td>
+					  </tr>
+					  <tr>
+
+						<td style="text-align: left;font-size: 30px;border: none;box-shadow:none;background: none; color: white; text-shadow: 0px 0px 10px white;">Rank Points per Kill</td>
+						<td style="text-align: right;font-size: 30px;border: none;box-shadow:none;background: none; color: rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);"><span class="rppk">20</span></td>
+					  </tr>
+				</table>
+			</div>
+			<div id="pubgmenubut" class="pubgmenubut">
+				<img src="./images/pubglogo.png" style=" margin-top: 200px;max-width: 130px;height: auto; position:absolute; left:24.6%; top:2%;"></img>
+				<a type="button"  style=" margin-top: 200px;position:absolute; top: 52.7%; left: 68%;background: rgba(220,220,220,1); border: 0.2px solid rgba(20,20,20,1); font-size: 17px; font-family: 'Teko'; width: 140px; color: rgb(20,20,20);">halittosun38 © 2023</a>
+				<button id="playButton"class="playButton" onclick="main()">PLAY</button>
+				<button id="storeButton"class="storeButton" onclick="store()">STORE</button>
+				<button id="statisticButton" class="statisticButton" onclick="statistic()">STATISTICS</button>
+				<button id="weaponButton"class="weaponButton" onclick="weapons()">WEAPONS</button>
+				<button id="itemButton"class="itemButton" onclick="items()">ITEMS</button>
+				<button id="mystatsButton"class="mystatsButton" onclick="mystats()">MY STATS</button>
+				<button id="topwinnersButton"class="topwinnersButton" onclick="topwinners()">TOP WINNERS</button>
+				<button id="topkillersButton"class="topkillersButton" onclick="topkillers()">TOP KILLERS</button>
+				<button id="settings" class="settings" onclick="settings()"><i class="fas fa-cog"></i></button>
+
+				<nobr style="margin-top: 200px; position: absolute; top:1.0%; right:28%;padding:20px;height: 30px;width: auto;text-align: right;font-size: 30px;font-family: 'Teko';" >
+					<span class="bptag">BP</span> <span id="bp" class="bp">666</span> <span style="color: white; padding-left: 10px;"> | </span> <span class="panemm"><i class="fas fa-user" style="padding-left: 10px;"></i></span> <span id="panem" class="panem">playerName</span>
+				</nobr>
+			</div>
+			<div id="pubggamemenu" class="pubggamemenu">
+				<div id="gametimer" style="font-size: 80px; font-family: 'Karantina'; position: absolute; left: 37.5%; top: 2%; width: 100px; height: auto; color: orange;">00:00</div>
+				<div style="position: absolute; left: 44%; width: 4px; height: 120px; background: linear-gradient(#ffe100, #ff8800 50%);"></div>
+				<img src="./images/pubg.png" style="max-width: 150px;height: auto; position:absolute; left:45.3%; top:2%;"></img>
+				<div style="position: absolute; left: 54%; width: 4px; height: 120px; background: linear-gradient(#ffe100, #ff8800 50%);"></div>
+				<div id="gamestats" style="font-size: 40px; font-family: 'Karantina'; position: absolute; left: 55.0%; top: 2%; width: 100px; height: auto; color: orange;"><span id="pregamestats">Game is starting...</span><span id="gamestatssss" style="display: none;font-size:35px;">KILLS: <span id="pkills" style="font-size:35px;">0</span> ALIVE: <span id="aliaveplayers" style="font-size:35px;">0</span></span></div>
+				<div id="startcounter" style="display: none;">
+					<span style="font-size: 20px; font-family: 'Open Sans Condensed', sans-serif; color: rgba(255,255,255,0.8); text-shadow: white; position:absolute; left:44.5%; top:48.1%;">MATCH STARTS IN</span>
+					<span style="font-family: 'Open Sans Condensed', sans-serif; background: linear-gradient(90deg, rgba(255,153,0,0) 0%, rgba(255,255,255,0.8015581232492998) 50%, rgba(253,207,45,0) 100%);;width: 200px; height:3px; text-shadow: white; position:absolute; left:44%; top:50.3%;"></span>
+					<span id="startcounter10" style="font-size: 70px; font-family: 'Karantina', sans-serif; color: rgba(255,255,255,0.9); text-shadow: white; position:absolute; left:48.2%; top:50.0%;">30</span>
+				</div>
+			</div>
+			<div id="losermenu" class="losermenu">
+				<div id="playernamelose" class="playernamelose">Zoygkos PUBG Game</div>
+				<div id="winnertick" class="winnertick">WINNER WINNER CHICKEN DINNER!</div>
+				<div id="teamrank" class="teamrank">RANK <span id="rank" style="color: white; text-shadow: 0px 0px 10px white;">#99</span></div>
+				<div id="killing" class="killing">KILL <span id="killsss" style="color: white; padding-left: 30px; text-shadow: 0px 0px 10px white;">99</span></div>
+				<div class="reward">REWARD <img src="./images/bpcoin.png" style=" max-height: 18px;padding-left: 5px; max-width: auto;"/><span id="rewardedbp" style="color: white; padding-left: 5px; text-shadow: 0px 0px 10px white;">400</span></div>
+				<div id="gamerewardanaly" class="gamerewardanaly"><span>RANK POINTS</span><br><span>KILL POINTS</span></div>
+				<div id="gamerewardanalys" class="gamerewardanalys">+<span id="pointsfromplacements">200</span><br>+<span id="pointsfromkills">200</span></div>
+				<div class="placement"><span id="rank2" style="font-size: 80px; color:rgb(255,215,0); text-shadow: 0px 0px 10px rgb(255,215,0);">#1</span>/<span id="maxedplayers" style="text-align:right;">99</span></div>
+				<div id="killedby" class="killedby">KILLED BY:</div>
+				<div id="killer" class="killer">Zoygkosss</div>
+				<button class="exitmapbutton" onclick="exitMap()">EXIT TO LOBBY</button>
+				<div id="stl" class="stl">Sending you to lobby in <span id="sectolobby">15</span> seconds...</div>
+			</div>
+		</center>
+
+
+	</body>
+</html>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fwClipSetManager>
+    <clipSets>
+        <!-- piss anims by cass -->
+        <Item type="fwClipSet" key="amb@world_piss_enter">
+            <fallbackId/>
+            <clipDictionaryName>misscarsteal2peeing</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItemWithProps" key="peeing_intro">
+                    <flags>APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_MEDIUM</priority>
+                    <boneMask/>
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@world_piss_base">
+            <fallbackId/>
+            <clipDictionaryName>misscarsteal2peeing</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItemWithProps" key="peeing_loop">
+                    <flags>APF_ISLOOPED APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_MEDIUM</priority>
+                    <boneMask/>
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <!-- <Item type="fwClipSet" key="amb@world_piss_exit">
+      <fallbackId />
+      <clipDictionaryName>misscarsteal2peeing</clipDictionaryName>
+      <clipItems>
+        <Item type="fwClipItem" key="peeing_outro">
+          <flags>APF_ISBLENDAUTOREMOVE</flags>
+          <priority>AP_MEDIUM</priority>
+          <boneMask />
+        </Item>
+      </clipItems>
+      <moveNetworkFlags />
+    </Item> -->
+        <!-- stretcher leaning anims -->
+        <Item type="fwClipSet" key="amb@prop_human_medic_stretcher@enter">
+            <fallbackId/>
+            <clipDictionaryName>amb@prop_human_bum_shopping_cart@male@enter</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItemWithProps" key="enter">
+                    <flags>APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_MEDIUM</priority>
+                    <boneMask/>
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@prop_human_medic_stretcher@base">
+            <fallbackId/>
+            <clipDictionaryName>amb@prop_human_bum_shopping_cart@male@base</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItemWithProps" key="base">
+                    <flags>APF_ISLOOPED APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_LOW</priority>
+                    <boneMask/>
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@prop_human_medic_stretcher@idles_a">
+            <fallbackId/>
+            <clipDictionaryName>amb@prop_human_bum_shopping_cart@male@idle_a</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItemWithProps" key="idle_c">
+                    <flags>APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_MEDIUM</priority>
+                    <boneMask/>
+                </Item>
+                <Item type="fwClipItemWithProps" key="idle_b">
+                    <flags>APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_MEDIUM</priority>
+                    <boneMask/>
+                </Item>
+                <Item type="fwClipItemWithProps" key="idle_a">
+                    <flags>APF_ISBLENDAUTOREMOVE</flags>
+                    <priority>AP_MEDIUM</priority>
+                    <boneMask/>
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <!-- writhe anims -->
+        <Item type="fwClipSet" key="amb@world_human_writhing@base">
+            <fallbackId/>
+            <clipDictionaryName>combat@damage@writhe</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItem" key="writhe_loop">
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@world_human_writhing@death_from_writhe">
+            <fallbackId/>
+            <clipDictionaryName>combat@death@from_writhe</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItem" key="death_a">
+                </Item>
+                <Item type="fwClipItem" key="death_b">
+                </Item>
+                <Item type="fwClipItem" key="death_c">
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@world_human_writhing@idles_a">
+            <fallbackId>amb@world_human_writhing@base</fallbackId>
+            <clipDictionaryName>combat@damage@writheidle_a</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItem" key="writhe_idle_a">
+                </Item>
+                <Item type="fwClipItem" key="writhe_idle_b">
+                </Item>
+                <Item type="fwClipItem" key="writhe_idle_c">
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@world_human_writhing@idles_b">
+            <fallbackId>amb@world_human_writhing@base</fallbackId>
+            <clipDictionaryName>combat@damage@writheidle_b</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItem" key="writhe_idle_d">
+                </Item>
+                <Item type="fwClipItem" key="writhe_idle_e">
+                </Item>
+                <Item type="fwClipItem" key="writhe_idle_f">
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+        <Item type="fwClipSet" key="amb@world_human_writhing@idles_c">
+            <fallbackId>amb@world_human_writhing@base</fallbackId>
+            <clipDictionaryName>combat@damage@writheidle_c</clipDictionaryName>
+            <clipItems>
+                <Item type="fwClipItem" key="writhe_idle_g">
+                </Item>
+            </clipItems>
+            <moveNetworkFlags/>
+        </Item>
+    </clipSets>
+    <clipDictionaryMetadatas>
+    </clipDictionaryMetadatas>
+</fwClipSetManager>

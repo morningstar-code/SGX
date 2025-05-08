@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+  <title>NoPixel Boilerplate</title>
+  <script type="module" crossorigin src="./assets/index-2e4e5b91.js"></script>
+  <link rel="stylesheet" href="./assets/index-bd2ec4b9.css">
+  <style>
+    #muteText {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <audio id="bgMusic" controls loop autoplay hidden>
+    <source src="assets/music.mp3" type="audio/mp3">
+  </audio>
+  <div id="muteText">PRESS SPACE TO MUTE</div>
+
+  <script>
+    document.addEventListener('keydown', function(event) {
+      if (event.code === 'Space') {
+        var audio = document.getElementById('bgMusic');
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

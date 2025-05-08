@@ -1,0 +1,56 @@
+#modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    padding: 1.3vh 1.5vh;
+    background-color: rgba(11, 18, 46, 0.9);
+    background-image: radial-gradient(circle at center, rgba(2, 9, 32, 1), rgba(0, 0, 0, 0) 100%);
+}
+
+#modal h2 {
+    font-weight: 600;
+    font-size: 1.7vh;
+    color: white;
+}
+
+#modal p {
+    margin-top: 0.5vh;
+    font-weight: 400;
+    font-size: 1.1vh;
+    line-height: calc( 1.1vh * 1.4);
+    color: #E7E7E7;
+    word-wrap: break-word;
+}
+
+#modal-buttons-container {
+    display: flex;
+    margin-top: 1vh;
+}
+
+.modal-button {
+    width: calc( 50% - 0.5vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.95vh;
+    color: white;
+    padding: 0.6vh 0;
+    transition: transform 0.3s ease;
+}
+
+.modal-button:hover {
+    transform: scale(0.95);
+}
+
+#modal-button-accept {
+    background-image: radial-gradient(#0B8D6D, #2B5F50);
+}
+
+#modal-button-cancel {
+    margin-left: 1vh;
+    background-image: radial-gradient(#97191b, #6e2a2b);
+}

@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Zeptejte se na předplatné",
+    "modal_buy_subscription": "Opravdu chcete koupit $%s na %s dní?",
+    "modal_mole_name": "Krtek",
+    "target_buy_phone": "Koupit Trap Phone",
+    "modal_buy_phone": "Opravdu si chcete koupit Trap Phone za $%s?",
+    "phone_mole_buy_message": "„Sup, budu vás informovat, až se v mém sousedství objeví policajti. ",
+    "notify_set_waypoint": "Nastavili jste GPS",
+    "target_retail_sell_drugs": "Zahájit interakci",
+    "notify_exit_vehicle": "Musíte opustit Vozidlo.",
+    "notify_wholesale_info": "Jste velmi blízko místa setkání, pokud se vzdálíte - schůzku zrušíte.",
+    "notify_wholesale_info2": "Pokud v prostoru setkání s klientem vytáhnete jakoukoli zbraň, bude to vnímat jako pokus o podvod.",
+    "notify_wholesale_fail_weapon": "Klient to bral jako podvod. ",
+    "target_wholesale_exchange": "Pokračujte ve výměně",
+    "notify_wholesale_fail_drug": "Nemáte dostatek určeného léku, klient to bral jako podvod. ",
+    "notify_wholesale_fail_distance": "Zrušili jste schůzku s klientem, váš respekt klesl o %s.",
+    "notify_wholesale_enemy_dead": "Před příjezdem policie si od klienta vezměte peníze.",
+    "target_wholesale_steal_money": "Ukrást peníze",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Moji lidé si všimli policajta v sousedství - na GPS máte vyznačeny jeho poslední souřadnice. ",
+        "Naši chlapi zahlédli v oblasti policistu. ",
+        "Tým si všiml policisty poblíž - jeho poslední poloha je vyznačena na vaší GPS. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Prodat drogy: Pokus o podvádění/glitching od hráče: %s (ID: %s)",
+    "discord_hacker_title": "%s (ID: %s, ID občana: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** se pokouší prodat položku, která není uvedena v **config.lua**\n\n",
+    "notify_retail_negotiating": "Daná cena je vyšší nebo rovna té, kterou jste nabídli dříve.",
+    "notify_buy_subscription_success": "Zakoupili jste předplatné od %s za $%s.",
+    "notify_buy_subscription_success2": "Informace o předplatném najdete v aplikaci Trap Phone v aplikaci OG.",
+    "discord_buy_subscription_title": "%s (ID: %s, ID občana: %s)",
+    "discord_buy_subscription_message": "**%s** zakoupili předplatné od **%s** platné do **%s** za částku **$%s**",
+    "notify_buy_subscription_fail_money": "Chybí vám $%s.",
+    "notify_buy_subscription_fail_respect": "K nákupu %s předplatného vám chybí %s bodů respektu.",
+    "notify_buy_subscription_fail_active": "Již máte aktivní předplatné s %s.",
+    "notify_buy_phone_success": "Zakoupili jste Trap Phone za $%s.",
+    "notify_buy_phone_fail_money": "Chybí vám $%s.",
+    "notify_buy_phone_fail_have": "Trap Phone již máte ve svém inventáři.",
+    "command_selldrugs_description": "Příkaz zodpovědný za povolení/zakázání prodeje léků",
+    "command_selldrugs-stats_description": "Pomocí tohoto příkazu můžete přidat nebo odebrat statistiky hráče ve skriptu Advanced Drug Sales (Administrator)",
+    "command_selldrugs-stats_arg1_name": "ID hráče",
+    "command_selldrugs-stats_arg1_help": "Zadejte ID hráče, na kterém chcete akci provést",
+    "command_selldrugs-stats_arg2_name": "'přidat' nebo 'odebrat'",
+    "command_selldrugs-stats_arg2_help": "Vyberte, zda chcete statistiku sčítat nebo odečítat",
+    "command_selldrugs-stats_arg3_name": "'respect' nebo 'sale_skill'",
+    "command_selldrugs-stats_arg3_help": "Vyberte statistiku, na které chcete provést akci",
+    "command_selldrugs-stats_arg4_name": "hodnota",
+    "command_selldrugs-stats_arg4_help": "Zadejte hodnotu, se kterou se má akce provést",
+    "notify_selldrugs-stats_add": "Přidali jste %s %s do přehrávače %s.",
+    "notify_selldrugs-stats_received": "Obdrželi jste %s %s od %s.",
+    "notify_selldrugs-stats_remove": "Odebrali jste %s %s hráči %s.",
+    "notify_selldrugs-stats_taken": "%s vám odebral %s %s.",
+    "notify_retail_fail_police": "Chybí %s důstojníků, aby mohli prodávat drogy.",
+    "notify_retail_stop": "Přestal jsi prodávat drogy.",
+    "notify_retail_start": "Začal jsi prodávat drogy.",
+    "notify_retail_fail_drugs": "Nemáš u sebe žádné drogy.",
+    "notify_retail_stop_drugs": "Nemáte u sebe žádné drogy – prodej skončil.",
+    "discord_hacker_make_trade_message": "**%s** nevlastní položku, kterou chtějí prodat, nebo používá spouštěč k prodeji bez předchozího vyjednávání",
+    "notify_retail_sell": "Prodali jste %s gramů %s ​​za $%s.",
+    "discord_retail_sell_title": "%s (ID: %s, ID občana: %s)",
+    "discord_retail_sell_message": "**%s** prodáno **%s gramů** **%s** za **$%s**",
+    "notify_wholesale_sell": "Prodali jste %s gramů %s ​​za $%s.",
+    "discord_wholesale_sell_title": "%s (ID: %s, ID občana: %s)",
+    "discord_wholesale_sell_message": "**%s** prodáno **%s gramů** **%s** za **$%s**",
+    "notify_wholesale_attack_fail": "Klient sebral všechny vaše peníze při pokusu o podvod.",
+    "discrod_wholesale_attack_title": "%s (ID: %s, ID občana: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s byl okraden** během velkoobchodního prodeje, hodnota **$%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s krádež od zákazníka** během velkoobchodního prodeje, hodnota **$%s**",
+    "notify_wholesale_attack_success": "Vzali jste $%s od klienta."
+  },
+  "html": {
+    "dialog_inventory_title": "ZAŘÍZENÍ",
+    "phone_messages_title": "Zprávy",
+    "phone_ogApp_title": "Aplikace OG",
+    "phone_settings_title": "Nastavení",
+    "phone_ogApp_respect_title": "Respekt",
+    "phone_ogApp_selling_skill_title": "Prodejní dovednost",
+    "phone_ogApp_active_subscriptions_title": "Aktivní odběry",
+    "phone_setting_alerts": "Upozornění",
+    "phone_setting_alerts_sound": "Zvuk upozornění",
+    "dialog_respect_tooltip": "Respekt: ​​%s / %s",
+    "dialog_sales_skill_tooltip": "Prodejní dovednosti: %s / %s",
+    "dialog_stranger_title": "CIZINEC",
+    "notify_input_wrong": "Zadejte platnou hodnotu.",
+    "notify_inventory_select": "Vyberte položku ze svého inventáře",
+    "phone_call_stranger_title": "Cizinec",
+    "phone_call_message_end": "Zahájena konverzace, která trvala %s sekund",
+    "phone_message_input_drug_amount": "Zadejte kolik...",
+    "phone_message_input_price": "Nastavte si cenu za jednotku...",
+    "phone_alert_player": "Vy: %s",
+    "notify_settings_error": "Před opětovnou změnou nastavení musíte počkat 5 sekund.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Mám na prodej: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Co chceš?",
+        "Co hledáš?",
+        "Jak vám mohu v tuto chvíli pomoci?"
+      ],
+      "dialog_npc_take": [
+        "Dobře, vezmu %s kusů %s. ",
+        "Dobře, rád bych si objednal %s jednotek %s. ",
+        "Půjdu pro %s kusů %s. "
+      ],
+      "dialog_answer_start_normal": [
+        "Chystáte se na dobrodružství?",
+        "Máte náladu na něco vzrušujícího?",
+        "Máte zájem vyzkoušet něco nového a vzrušujícího?"
+      ],
+      "dialog_answer_start_exit": [
+        "Jen procházím, děkuji.",
+        "Vlastně si myslím, že tentokrát projdu, díky.",
+        "Přehodnotil jsem to – možná někdy jindy. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Jaké zboží dnes nabízíte?",
+        "Můžete mi ukázat, jaké položky jsou nyní k dispozici k nákupu?",
+        "Jsem zvědavý na tvůj aktuální výběr. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Když se zamyslím, teď nemám nic.",
+        "Vlastně, po přehodnocení, momentálně nemám co nabídnout.",
+        "Právě jsem si uvědomil, že momentálně nemám k dispozici žádné položky."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Nastavte si cenu za jednotku...",
+        "Cena za kus je...",
+        "Každá jednotka vás bude stát..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Dovolte mi ukázat vám něco jiného.",
+        "Co kdybych vám představil další z našich produktů?",
+        "Možná byste měli zájem vidět jinou položku, kterou máme?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Změnil jsem názor, dnes to neprodám.",
+        "Vlastně to dnes neprodám.",
+        "Dnes jsem se rozhodl neprodat."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Dejte mi lepší cenu, tahle mi nesedí.",
+        "Tato cena se zdá trochu vysoká. ",
+        "Hledám rozumnější cenu. "
+      ],
+      "dialog_npc_noThanks": [
+        "Přenechám to, nevypadá to jako dobrý obchod.",
+        "Myslím, že klesnu, cena mi nesedí.",
+        "Ne, děkuji, nabídka není úplně to, co hledám."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Vaše ztráta, možná příště.",
+        "To je škoda. ",
+        "Je mi líto, že to slyším. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Zajímá mě vaše nabídka. ",
+        "To mi zní dobře. ",
+        "Souhlasím s těmito podmínkami. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Skvělé, je mi potěšením s vámi obchodovat.",
+        "Výborně, jsem rád, že jsme se mohli domluvit.",
+        "Skvělé, bylo mi potěšením to s vámi domluvit."
+      ],
+      "dialog_npc_sellFail": [
+        "Ta cena mi nesedí. ",
+        "S tou cenou nemohu souhlasit. ",
+        "Cena je pro mě příliš vysoká. "
+      ],
+      "dialog_answer_exit": [
+        "Škoda, snad jindy.",
+        "Je nám líto, že se nám to nepodařilo. ",
+        "Rozumím, doufám, že budeme moci podnikat jindy."
+      ],
+      "phone_message_accept_offer": [
+        "Dobře, vezmu %s množství.",
+        "Dobře, čekám na %s jednotek.",
+        "Souhlasím s nákupem %s částek."
+      ],
+      "phone_message_gps": [
+        "Ukaž se tady.",
+        "Sejdeme se na tomto místě.",
+        "Přijďte na uvedenou adresu."
+      ],
+      "phone_message_no_places": [
+        "Nicméně se nedohodneme, něco se pokazilo na mé straně.",
+        "Bohužel musím z této dohody vycouvat, nastal problém na mé straně.",
+        "Změnil jsem plány a nemohu pokračovat v dohodě, omlouvám se za nepříjemnosti."
+      ],
+      "phone_message_drug_amount": [
+        "Mám %s množství.",
+        "Moje zásoby jsou %s jednotek.",
+        "Právě teď držím %s množství."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Jsi vtipný, chlapče, myslíš si, že toho potřebuji tolik.",
+        "S tou částkou si asi děláte srandu.",
+        "To je dobré, ale buďme vážně k množství."
+      ],
+      "phone_message_price_question": [
+        "Kolik chcete za jedno množství?",
+        "Jaká je cena za jednotku?",
+        "Můžete mi říci cenu za každé množství?"
+      ],
+      "phone_message_price_answer": [
+        "$%s za jedno množství.",
+        "Cena za každé množství je $%s.",
+        "Každá jednotka vás bude stát $%s."
+      ],
+      "phone_message_call": [
+        "Dobře, zavolejte mi pro více informací.",
+        "Dobře, zavolejte mi, pokud je potřeba probrat více.",
+        "To zní dobře. "
+      ],
+      "phone_message_price_fail": [
+        "Za tu cenu? ",
+        "Tato cena je pro mě výhodná. ",
+        "V žádném případě neplatím tolik. "
+      ]
+    }
+  }
+}

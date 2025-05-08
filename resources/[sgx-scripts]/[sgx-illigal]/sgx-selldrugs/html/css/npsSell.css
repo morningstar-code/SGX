@@ -1,0 +1,379 @@
+#npcSell-container {
+    height: 100vh;
+    width: auto;
+    display: none; /* flex */
+    justify-content: center;
+}
+
+.npcSell-background {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(36, 36, 36, 0.9), #24242400 40%), 
+                      linear-gradient(to left, rgba(36, 36, 36, 0.9), #24242400 40%);
+}
+
+#dialog-container {
+    height: 100%;
+    width: 35vw;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+#dialog-interactive-icons {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5vh;
+}
+
+#arrow-for-select-item {
+    position: absolute;
+    height: 0.9vw;
+    width: auto;
+    right: 0.4vw;
+    top: -1.5vw; 
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(90deg);
+    }
+}
+
+#dialog-interactive-backpack {
+    height: 0.9vw;
+    width: auto;
+    padding: 0.4vw;
+    border-radius: 3px;
+    background-image: radial-gradient(rgba(97, 223, 178, 0.95), rgba(50, 134, 103, 0.95) 90%);
+    transition: transform 0.3s ease;
+}
+
+#dialog-interactive-backpack:hover {
+    transform: scale(0.9); 
+}
+
+#dialog-player-first-answer, 
+#dialog-player-second-answer, 
+#dialog-player-third-answer {
+    transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(0.95); 
+}
+
+#dialog-interactive-arrow {
+    height: 0.7vw;
+    width: auto;
+    position: absolute;
+    right: -2.5%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#dialog-backpack-container {
+    position: absolute;
+    bottom: 0;
+    left: 103%;
+    width: 17vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dialog-interactive-arrow, #dialog-backpack-container {
+    display: none;
+}
+
+.custom-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #24262f;
+    border: 1px solid #00f5b7;
+    padding: 1vh 1vw;
+
+    z-index: 1000;
+    color: white;
+    font-weight: 600;
+    font-size: 0.6vw;
+}
+
+.dialog-backpack-item {
+    margin-right: 0.5vw;
+    margin-top: 0.5vw;
+    height: 5vw;
+    width: 5vw;
+    background-image: radial-gradient(circle at center, rgb(60, 60, 60, 0.9), rgba(37, 39, 43, 0.9) 100%);
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dialog-backpack-item h2 {
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, 0);
+    color: #D5D5D5;
+    font-weight: 600;
+    font-size: 0.6vw;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-width: 4vw; 
+}
+
+.dialog-backpack-item img {
+    position: absolute;
+    height: 2.5vw;
+    width: auto;
+    left: 50%;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    color: #D5D5D5;
+    font-weight: 600;
+    font-size: 0.6vw;
+}
+
+.dialog-backpack-item p {
+    position: absolute;
+    right: 0.5vw;
+    bottom: 0.3vw;
+    color: #D5D5D5;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+
+#dialog-title {
+    display: none;
+    position: absolute;
+    top: -2vh;
+    color: white;
+    font-weight: 600;
+    font-size: 1vw;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.65);
+}
+
+#dialog {
+    background-color: #24262fec;
+    border: 1px solid #00f5b7;
+    padding: 2.5vh 1.5vw;
+    padding-bottom: 3vh;
+    margin-bottom: 3vh;
+}
+
+#dialog-header {
+    display: flex;
+    align-items: flex-end;
+}
+
+#dialog-header h2 {
+    color: rgb(0, 255, 221);
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+
+#dialog-header p {
+    color: #00ffd5;
+    font-size: 0.7vw;
+    font-weight: 400;
+    margin-left: 0.3vw;
+    margin-bottom: 0.2vh;
+}
+
+#dialog-npc-box {
+    margin-top: 1vh;
+    width: calc( 100% - 1vw);
+    padding: 0.8vh 0.5vw;
+    background-color: rgba(217, 217, 217, 0.1);
+    background-image: radial-gradient(rgba(72, 72, 72, 0.25), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.dialog-icon {
+    height: 0.7vw;
+    width: auto;
+    padding: 0.35vw;
+    border-radius: 3px;
+}
+
+.dialog-icon-blue {
+    background-color: rgba(67, 153, 255, 0.39);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+}
+
+.dialog-icon-green {
+    background-color: rgba(90, 255, 176, 0.39);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+}
+
+.dialog-icon-red {
+    background-color: rgba(255, 51, 51, 0.39);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+}
+
+.dialog-icon-write {
+    background-color: rgba(133, 90, 255, 0.39);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+}
+
+.dialog-input-field {
+    width: calc( 80% - 0.5vw);
+    padding: 8px;
+    margin-left: 0.5vw;
+    box-sizing: border-box;
+    background: transparent;
+    border: transparent;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7vw;
+    font-weight: 400;
+}
+
+.dialog-input-field:focus {
+    border-color: #66afe9; 
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inline-icon {
+    height: 0.7vw;
+    width: auto;
+    margin-top: auto;
+}
+
+.dialog-confirm-icon {
+    height: 0.9vw;
+    width: auto;
+    margin-left: 0.5vw;
+    cursor: pointer;
+}
+
+.dialog-data-text {
+    color: white;
+    font-size: 0.7vw;
+    line-height: calc( 0.7vw * 1.4 );
+    font-weight: 400;
+    margin-left: 0.5vw;
+}
+
+#dialog-player-box-first-row {
+    display: flex;
+    margin-top: 1.5vh;
+}
+
+#dialog-player-first-answer {
+    width: calc( 50% - 1.25vw);
+    padding: 0.8vh 0.5vw;
+    background-color: rgba(217, 217, 217, 0.1);
+    background-image: radial-gradient(rgba(72, 72, 72, 0.25), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+#dialog-player-second-answer {
+    width: calc( 50% - 1.25vw);
+    margin-left: 0.5vw;
+    padding: 0.8vh 0.5vw;
+    background-color: rgba(217, 217, 217, 0.1);
+    background-image: radial-gradient(rgba(72, 72, 72, 0.25), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+#dialog-player-third-answer {
+    margin-top: 0.5vw;
+    width: calc( 100% - 1vw);
+    padding: 0.8vh 0.5vw;
+    background-color: rgba(217, 217, 217, 0.1);
+    background-image: radial-gradient(rgba(72, 72, 72, 0.25), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+/* Experience */
+
+#progress-container {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+}
+
+.progress-wrapper {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    margin-bottom: 1vw;
+}
+
+.progress-circle-svg {
+    transform: rotate(-90deg); /* Obraca SVG, aby postęp zaczynał się od góry */
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.progress-circle-back {
+    fill: none;
+    stroke: #484848; 
+    stroke-width: 10px; 
+}
+
+.progress-circle-bar-respect,
+.progress-circle-bar-sales {
+    fill: none; 
+    stroke-width: 10px; 
+    stroke-dasharray: 282.6; 
+    stroke-dashoffset: 0; 
+}
+
+.progress-circle-bar-respect {
+    stroke: #36CFA2; 
+}
+
+.progress-circle-bar-sales {
+    stroke: #84CEFE; 
+}
+
+.itemNameColor {
+    color: #36CFA2
+}
+
+.progress-content {
+    position: absolute;
+    height: 4.3vw;
+    width: 4.3vw;
+    border-radius: 50%;
+    background-color: #212121;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)90%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-img {
+    height: 2vw;
+    width: auto;
+}

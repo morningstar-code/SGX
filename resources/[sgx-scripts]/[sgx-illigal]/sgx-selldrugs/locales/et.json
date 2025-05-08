@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Küsige tellimuse kohta",
+    "modal_buy_subscription": "Kas olete kindel, et soovite osta $%s %s päevaks?",
+    "modal_mole_name": "Sünnimärk",
+    "target_buy_phone": "Ostke Trap Telefon",
+    "modal_buy_phone": "Kas olete kindel, et soovite osta Trap Phone'i hinnaga $%s?",
+    "phone_mole_buy_message": "'sup, ma hoian teid kursis, kui politseinikud mu naabruskonda ilmuvad. ",
+    "notify_set_waypoint": "Olete oma GPS-i seadistanud",
+    "target_retail_sell_drugs": "Alusta interaktsiooni",
+    "notify_exit_vehicle": "Peate sõidukist väljuma.",
+    "notify_wholesale_info": "Oled kohtumispunktile väga lähedal, kui kolid ära – jätad koosoleku ära.",
+    "notify_wholesale_info2": "Kui tõmbate kliendiga koosolekualal välja mõne relva, tajub ta seda kelmuse katsena.",
+    "notify_wholesale_fail_weapon": "Klient võttis seda pettusena. ",
+    "target_wholesale_exchange": "Jätkake vahetust",
+    "notify_wholesale_fail_drug": "Teil ei piisa nimetatud ravimist, klient võttis seda pettusena. ",
+    "notify_wholesale_fail_distance": "Tühistasite kohtumise kliendiga, teie lugupidamine langeb %s võrra.",
+    "notify_wholesale_enemy_dead": "Võtke kliendilt raha enne politsei saabumist.",
+    "target_wholesale_steal_money": "Varasta raha",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Minu inimesed märkasid naabruses politseinikku – GPS-i on märgitud tema viimased koordinaadid. ",
+        "Meie poisid märkasid piirkonnas politseinikku. ",
+        "Meeskond märkas läheduses politseinikku – tema viimane asukoht on märgitud teie GPS-i. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Narkootikumide müük: Mängijalt: %s (ID: %s) tehtud petmis-/sobitamiskatse",
+    "discord_hacker_title": "%s (ID: %s, kodaniku ID: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** üritab müüa eset, mida pole loendis **config.lua**\n\n",
+    "notify_retail_negotiating": "Antud hind on kõrgem või võrdne varem pakutuga.",
+    "notify_buy_subscription_success": "Ostsite tellimuse ettevõttelt %s hinnaga $%s.",
+    "notify_buy_subscription_success2": "Teavet tellimuse kohta leiate rakendusest Trap Phone OG rakendusest.",
+    "discord_buy_subscription_title": "%s (ID: %s, kodaniku ID: %s)",
+    "discord_buy_subscription_message": "**%s** ostis **%s** tellimuse, mis kehtib kuni **%s** summas **$%s**",
+    "notify_buy_subscription_fail_money": "Teil on puudu $%s.",
+    "notify_buy_subscription_fail_respect": "Teil puudub %s austuspunkti %s tellimuse ostmiseks.",
+    "notify_buy_subscription_fail_active": "Teil on juba aktiivne tellimus teenusega %s.",
+    "notify_buy_phone_success": "Ostsite Trap Phone'i hinnaga $%s.",
+    "notify_buy_phone_fail_money": "Teil on puudu $%s.",
+    "notify_buy_phone_fail_have": "Teie laos on juba Trap Phone.",
+    "command_selldrugs_description": "Narkootikumide müügi lubamise/keelamise eest vastutav käsk",
+    "command_selldrugs-stats_description": "Selle käsuga saate skriptis Advanced Drug Sales (administraator) lisada või eemaldada mängija statistikat.",
+    "command_selldrugs-stats_arg1_name": "Mängija ID",
+    "command_selldrugs-stats_arg1_help": "Esitage mängija ID, kellega soovite toimingu sooritada",
+    "command_selldrugs-stats_arg2_name": "'lisa' või 'eemalda'",
+    "command_selldrugs-stats_arg2_help": "Valige, kas soovite statistikat lisada või lahutada",
+    "command_selldrugs-stats_arg3_name": "„austus” või „müügioskus”",
+    "command_selldrugs-stats_arg3_help": "Valige statistika, mille puhul soovite toimingu teha",
+    "command_selldrugs-stats_arg4_name": "väärtus",
+    "command_selldrugs-stats_arg4_help": "Sisestage väärtus, mille alusel toiming tuleks läbi viia",
+    "notify_selldrugs-stats_add": "Lisasite %s %s mängijasse %s.",
+    "notify_selldrugs-stats_received": "Saite kasutajalt %s %s %s.",
+    "notify_selldrugs-stats_remove": "Võtsite mängijalt %s ära %s %s.",
+    "notify_selldrugs-stats_taken": "%s võttis sinult %s %s ära.",
+    "notify_retail_fail_police": "Puuduvad %s ohvitserid, kes suudaksid narkootikume müüa.",
+    "notify_retail_stop": "Sa lõpetasid narkootikumide müümise.",
+    "notify_retail_start": "Hakkasite narkootikume müüma.",
+    "notify_retail_fail_drugs": "Teil ei ole mingeid ravimeid.",
+    "notify_retail_stop_drugs": "Teil pole uimasteid kaasas – müük on lõppenud.",
+    "discord_hacker_make_trade_message": "**%s** ei oma kaupa, mida ta soovib müüa või kasutab müügipäästikut ilma eelnevate läbirääkimisteta",
+    "notify_retail_sell": "Müüsite %s grammi toodet %s hinnaga $%s.",
+    "discord_retail_sell_title": "%s (ID: %s, kodaniku ID: %s)",
+    "discord_retail_sell_message": "**%s** müüdi **%s grammi** **%s** hinnaga **$%s**",
+    "notify_wholesale_sell": "Müüsite %s grammi toodet %s hinnaga $%s.",
+    "discord_wholesale_sell_title": "%s (ID: %s, kodaniku ID: %s)",
+    "discord_wholesale_sell_message": "**%s** müüdi **%s grammi** **%s** hinnaga **$%s**",
+    "notify_wholesale_attack_fail": "Klient võttis kelmuse katse käigus kogu teie sularaha.",
+    "discrod_wholesale_attack_title": "%s (ID: %s, kodaniku ID: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s rööviti** hulgimüügi käigus, väärtus **$%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s varastas kliendilt** hulgimüügi käigus, väärtus **$%s**",
+    "notify_wholesale_attack_success": "Võtsite kliendilt $%s."
+  },
+  "html": {
+    "dialog_inventory_title": "SEADMED",
+    "phone_messages_title": "Sõnumid",
+    "phone_ogApp_title": "OG rakendus",
+    "phone_settings_title": "Seaded",
+    "phone_ogApp_respect_title": "Respekt",
+    "phone_ogApp_selling_skill_title": "Müügioskus",
+    "phone_ogApp_active_subscriptions_title": "Aktiivsed tellimused",
+    "phone_setting_alerts": "Märguanded",
+    "phone_setting_alerts_sound": "Hoiatuste heli",
+    "dialog_respect_tooltip": "Austus: %s / %s",
+    "dialog_sales_skill_tooltip": "Müügioskused: %s / %s",
+    "dialog_stranger_title": "VÕÕRAS",
+    "notify_input_wrong": "Sisestage kehtiv väärtus.",
+    "notify_inventory_select": "Valige oma laost üksus",
+    "phone_call_stranger_title": "Võõras",
+    "phone_call_message_end": "Alustas vestlust, mis kestis %s sekundit",
+    "phone_message_input_drug_amount": "Sisesta kui palju...",
+    "phone_message_input_price": "Määrake oma ühiku hind...",
+    "phone_alert_player": "Sina: %s",
+    "notify_settings_error": "Enne seadete uuesti muutmist peate ootama 5 sekundit.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Mul on müügis: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Mida sa tahad?",
+        "Mida sa otsid?",
+        "Kuidas saan teid praegu aidata?"
+      ],
+      "dialog_npc_take": [
+        "Olgu, ma võtan %s tükki %s. ",
+        "Olgu, ma soovin tellida %s ühikut %s. ",
+        "Ma otsin %s tükki %s. "
+      ],
+      "dialog_answer_start_normal": [
+        "Kas olete valmis seikluseks?",
+        "Kas sul on tuju millekski põnevaks?",
+        "Kas olete huvitatud millegi uue ja põneva proovimisest?"
+      ],
+      "dialog_answer_start_exit": [
+        "Just läbin, tänan.",
+        "Tegelikult ma arvan, et see aeg möödub, aitäh.",
+        "Olen ümber mõelnud – võib-olla mõni teine ​​kord. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Mis kaupa sul täna pakkuda on?",
+        "Kas saate mulle näidata, milliseid esemeid on praegu võimalik osta?",
+        "Mind huvitab teie praegune valik. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Kui järele mõelda, siis mul pole praegu midagi.",
+        "Tegelikult ei ole mul praegu ümbermõeldes midagi pakkuda.",
+        "Sain just aru, et mul pole hetkel ühtegi kaupa saadaval."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Määrake oma ühiku hind...",
+        "Kauba hind on...",
+        "Iga üksus maksab teile..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Las ma näitan sulle midagi muud.",
+        "Kuidas oleks, kui tutvustaksin teile veel üht meie toodet?",
+        "Võib-olla oleksite huvitatud mõne teistsuguse toote nägemisest?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Olen meelt muutnud, täna ei müü.",
+        "Tegelikult ma seda täna ei müü.",
+        "Otsustasin täna mitte müüa."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Paku parem hind, see mulle ei sobi.",
+        "See hind tundub veidi kõrge. ",
+        "Otsin mõistlikumat hinda. "
+      ],
+      "dialog_npc_noThanks": [
+        "Ma annan selle edasi, see ei tundu hea tehing.",
+        "Ma arvan, et ma keeldun, hind ei sobi mulle.",
+        "Ei, tänan, tehing pole päris see, mida ma otsin."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Teie kaotus, võib-olla järgmisel korral.",
+        "Sellest on kahju. ",
+        "Kahju seda kuulda. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Olen teie pakkumisest huvitatud. ",
+        "See kõlab mulle hästi. ",
+        "Nõustun nende tingimustega. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Suurepärane, rõõm teiega äri teha.",
+        "Suurepärane, mul on hea meel, et jõudsime kokkuleppele.",
+        "Fantastiline, mul on olnud rõõm seda teiega korraldada."
+      ],
+      "dialog_npc_sellFail": [
+        "Minu jaoks see hind ei sobi. ",
+        "Ma ei saa selle hinnaga nõustuda. ",
+        "Hind on minu jaoks liiga kõrge. "
+      ],
+      "dialog_answer_exit": [
+        "Kahju, võib-olla mõni teine ​​kord.",
+        "Kahjuks me ei saanud seda tööle panna. ",
+        "Arusaadav, loodan, et saame teinekord äri ajada."
+      ],
+      "phone_message_accept_offer": [
+        "Olgu, ma võtan %s kogust.",
+        "Olgu, ma ootan %s ühikut.",
+        "Nõustun ostma %s summas."
+      ],
+      "phone_message_gps": [
+        "Näidake siia.",
+        "Kohtume selles kohas.",
+        "Tule antud aadressile."
+      ],
+      "phone_message_no_places": [
+        "Kuid me ei tee tehingut, minu poolel läks midagi valesti.",
+        "Kahjuks pean sellest tehingust taganema, minuga on tekkinud probleem.",
+        "Mul on plaanid muutunud ja ma ei saa tehinguga jätkata. Vabandame ebamugavuste pärast."
+      ],
+      "phone_message_drug_amount": [
+        "Mul on %s kogust.",
+        "Minu laos on %s ühikut.",
+        "Mul on praegu %s kogust."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Sa oled naljakas, poiss, mõeldes, et mul on nii palju vaja.",
+        "Sa vist teed selle summaga nalja.",
+        "See on hea, kuid olgem koguse suhtes tõsiseltvõetavad."
+      ],
+      "phone_message_price_question": [
+        "Kui palju soovite ühe koguse eest?",
+        "Mis on ühiku hind?",
+        "Kas saate mulle öelda iga koguse maksumuse?"
+      ],
+      "phone_message_price_answer": [
+        "$%s ühe koguse eest.",
+        "Iga koguse hind on $%s.",
+        "Iga üksus maksab teile %s $."
+      ],
+      "phone_message_call": [
+        "Olgu, lisateabe saamiseks helistage mulle.",
+        "Olgu, helistage mulle, kui on veel midagi arutada.",
+        "Kõlab hästi. "
+      ],
+      "phone_message_price_fail": [
+        "Selle hinnaga? ",
+        "See hind on minu jaoks rikkuja. ",
+        "Ma ei maksa mingil juhul nii palju. "
+      ]
+    }
+  }
+}

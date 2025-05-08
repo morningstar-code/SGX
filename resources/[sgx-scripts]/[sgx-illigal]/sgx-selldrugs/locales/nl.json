@@ -1,0 +1,227 @@
+{
+  "client": {
+    "target_buy_subscription": "Vraag naar het abonnement",
+    "modal_buy_subscription": "Weet je zeker dat je een $%s voor %s dagen wilt kopen?",
+    "modal_mole_name": "Wrat",
+    "target_buy_phone": "Koop Trap Phone",
+    "modal_buy_phone": "Weet je zeker dat je een Trap Phone wilt kopen voor $%s?",
+    "phone_mole_buy_message": "'Sup, ik hou je op de hoogte als er politie in mijn buurt verschijnt. ",
+    "notify_set_waypoint": "U heeft uw GPS ingesteld",
+    "target_retail_sell_drugs": "Interactie starten",
+    "notify_exit_vehicle": "U moet het voertuig verlaten.",
+    "notify_wholesale_info": "U bent heel dicht bij het ontmoetingspunt. Als u verhuist, annuleert u de vergadering.",
+    "notify_wholesale_info2": "Als u in de ontmoetingsruimte met de cliënt een wapen tevoorschijn haalt, zal hij dit opvatten als een poging tot oplichting.",
+    "notify_wholesale_fail_weapon": "De klant beschouwde het als fraude. ",
+    "target_wholesale_exchange": "Ga verder met de uitwisseling",
+    "notify_wholesale_fail_drug": "U heeft niet genoeg van het gespecificeerde medicijn, de cliënt beschouwde het als fraude. ",
+    "notify_wholesale_fail_distance": "Je hebt de ontmoeting met de klant geannuleerd, je respect daalt met %s.",
+    "notify_wholesale_enemy_dead": "Neem het geld van de klant af voordat de politie arriveert.",
+    "target_wholesale_steal_money": "Steel het geld",
+    "randomTexts": {
+      "phone_mole_message": [
+        "Mijn mensen hebben een agent in de buurt opgemerkt. Op de GPS staan ​​zijn laatste coördinaten gemarkeerd. ",
+        "Onze jongens zagen een agent in de buurt. ",
+        "Het team heeft een politieagent in de buurt opgemerkt. Zijn laatste locatie staat op uw GPS aangegeven. "
+      ]
+    }
+  },
+  "server": {
+    "print_hacker": "Drugs verkopen: Poging tot bedrog/glitching van de speler: %s (ID: %s)",
+    "discord_hacker_title": "%s (ID: %s, burger-ID: %s)",
+    "discord_hacker_calculate_percentage_message": "**%s** probeert een item te verkopen dat niet in **config.lua** staat\n\n",
+    "notify_retail_negotiating": "De opgegeven prijs is hoger of gelijk aan de prijs die u eerder heeft aangeboden.",
+    "notify_buy_subscription_success": "Je hebt een abonnement gekocht bij %s voor $%s.",
+    "notify_buy_subscription_success2": "Informatie over het abonnement vind je in Trap Phone op de OG App.",
+    "discord_buy_subscription_title": "%s (ID: %s, burger-ID: %s)",
+    "discord_buy_subscription_message": "**%s** heeft een abonnement gekocht van **%s** geldig tot **%s** voor een bedrag van **$%s**",
+    "notify_buy_subscription_fail_money": "Je mist $%s.",
+    "notify_buy_subscription_fail_respect": "Je mist %s respectpunten om %s abonnement te kopen.",
+    "notify_buy_subscription_fail_active": "Je hebt al een actief abonnement bij %s.",
+    "notify_buy_phone_success": "Je hebt Trap Phone gekocht voor $%s.",
+    "notify_buy_phone_fail_money": "Je mist $%s.",
+    "notify_buy_phone_fail_have": "Je hebt Trap Phone al in je inventaris.",
+    "command_selldrugs_description": "Commando verantwoordelijk voor het in-/uitschakelen van de drugsverkoop",
+    "command_selldrugs-stats_description": "Met deze opdracht kunt u spelerstatistieken toevoegen of verwijderen in het Advanced Drug Sales-script (Beheerder)",
+    "command_selldrugs-stats_arg1_name": "Speler-ID",
+    "command_selldrugs-stats_arg1_help": "Geef de ID van de speler op op wie u de actie wilt uitvoeren",
+    "command_selldrugs-stats_arg2_name": "'toevoegen of verwijderen'",
+    "command_selldrugs-stats_arg2_help": "Kies of u statistieken wilt optellen of aftrekken",
+    "command_selldrugs-stats_arg3_name": "'respect' of 'verkoopvaardigheid'",
+    "command_selldrugs-stats_arg3_help": "Selecteer de Statistiek waarop u een actie wilt uitvoeren",
+    "command_selldrugs-stats_arg4_name": "waarde",
+    "command_selldrugs-stats_arg4_help": "Voer de waarde in waarop de actie moet worden uitgevoerd",
+    "notify_selldrugs-stats_add": "Je hebt %s %s toegevoegd aan de speler %s.",
+    "notify_selldrugs-stats_received": "Je hebt %s %s ontvangen van %s.",
+    "notify_selldrugs-stats_remove": "Je hebt %s %s weggenomen van de speler %s.",
+    "notify_selldrugs-stats_taken": "%s heeft %s %s van je afgenomen.",
+    "notify_retail_fail_police": "Gebrek aan %s agenten om drugs te kunnen verkopen.",
+    "notify_retail_stop": "Je bent gestopt met het verkopen van drugs.",
+    "notify_retail_start": "Je begon drugs te verkopen.",
+    "notify_retail_fail_drugs": "Je hebt geen medicijnen bij je.",
+    "notify_retail_stop_drugs": "Je hebt geen drugs bij je, de verkoop is voorbij.",
+    "discord_hacker_make_trade_message": "**%s** bezit het item dat ze willen verkopen niet of gebruikt een trigger voor verkoop zonder voorafgaande onderhandelingen",
+    "notify_retail_sell": "Je hebt %s gram %s verkocht voor $%s.",
+    "discord_retail_sell_title": "%s (ID: %s, burger-ID: %s)",
+    "discord_retail_sell_message": "**%s** verkocht **%s gram** van **%s** voor **$%s**",
+    "notify_wholesale_sell": "Je hebt %s gram %s verkocht voor $%s.",
+    "discord_wholesale_sell_title": "%s (ID: %s, burger-ID: %s)",
+    "discord_wholesale_sell_message": "**%s** verkocht **%s gram** van **%s** voor **$%s**",
+    "notify_wholesale_attack_fail": "De klant heeft al uw geld afgepakt bij een poging tot oplichting.",
+    "discrod_wholesale_attack_title": "%s (ID: %s, burger-ID: %s)",
+    "discrod_wholesale_attack_message_player_dead": "**%s is beroofd** tijdens een groothandelsuitverkoop, waarde **$%s**",
+    "discrod_wholesale_attack_message_enemy_dead": "**%s gestolen van een klant** tijdens een groothandelsuitverkoop, waarde **$%s**",
+    "notify_wholesale_attack_success": "Je hebt $%s van de klant afgepakt."
+  },
+  "html": {
+    "dialog_inventory_title": "APPARATUUR",
+    "phone_messages_title": "Berichten",
+    "phone_ogApp_title": "OG-app",
+    "phone_settings_title": "Instellingen",
+    "phone_ogApp_respect_title": "Respect",
+    "phone_ogApp_selling_skill_title": "Verkoopvaardigheid",
+    "phone_ogApp_active_subscriptions_title": "Actieve abonnementen",
+    "phone_setting_alerts": "Waarschuwingen",
+    "phone_setting_alerts_sound": "Waarschuwingen geluid",
+    "dialog_respect_tooltip": "Respect: %s / %s",
+    "dialog_sales_skill_tooltip": "Verkoopvaardigheden: %s / %s",
+    "dialog_stranger_title": "VREEMDELING",
+    "notify_input_wrong": "Vul alstublieft een geldige waarde in.",
+    "notify_inventory_select": "Selecteer een item uit je inventaris",
+    "phone_call_stranger_title": "Vreemdeling",
+    "phone_call_message_end": "Begon een gesprek dat %s seconden duurde",
+    "phone_message_input_drug_amount": "Vul in hoeveel...",
+    "phone_message_input_price": "Bepaal uw prijs per eenheid...",
+    "phone_alert_player": "Jij: %s",
+    "notify_settings_error": "U moet 5 seconden wachten voordat u de instellingen opnieuw wijzigt.",
+    "randomTexts": {
+      "dialog_answer_sale_offer": [
+        "Ik heb te koop: %s"
+      ],
+      "dialog_npc_first_message": [
+        "Wat wil je?",
+        "Waar bent u naar op zoek?",
+        "Hoe kan ik u op dit moment helpen?"
+      ],
+      "dialog_npc_take": [
+        "Oké, ik neem %s stukjes van %s. ",
+        "Oké, ik wil graag %s eenheden van %s bestellen. ",
+        "Ik ga voor %s stukjes van %s. "
+      ],
+      "dialog_answer_start_normal": [
+        "Ben je toe aan een avontuur?",
+        "Heb je zin in iets spannends?",
+        "Zin om iets nieuws en spannends te proberen?"
+      ],
+      "dialog_answer_start_exit": [
+        "Even langskomen, dank je.",
+        "Eigenlijk denk ik dat ik deze keer wel slaag, bedankt.",
+        "Ik heb er nog eens over nagedacht – misschien een andere keer. "
+      ],
+      "dialog_npc_whatYouHave": [
+        "Welke goederen heeft u vandaag te bieden?",
+        "Kunt u mij laten zien welke artikelen momenteel te koop zijn?",
+        "Ik ben benieuwd naar je huidige selectie. "
+      ],
+      "dialog_answer_whatYouHave_exit": [
+        "Bij nader inzien heb ik op dit moment niets.",
+        "Eigenlijk heb ik, als ik er nog eens over nadenk, momenteel niets te bieden.",
+        "Ik kom er net achter dat ik momenteel geen artikelen beschikbaar heb."
+      ],
+      "dialog_answer_iWillTake_write": [
+        "Bepaal uw prijs per eenheid...",
+        "De prijs per stuk bedraagt...",
+        "Elke eenheid kost je..."
+      ],
+      "dialog_answer_iWillTake_normal": [
+        "Ik zal je nog iets anders laten zien.",
+        "Wat dacht je ervan als ik je kennis laat maken met nog een van onze producten?",
+        "Misschien ben je geïnteresseerd in een ander item dat we hebben?"
+      ],
+      "dialog_answer_iWillTake_exit": [
+        "Ik ben van gedachten veranderd, ik verkoop het vandaag niet.",
+        "Eigenlijk ga ik hem vandaag niet verkopen.",
+        "Vandaag besloten om niet te verkopen."
+      ],
+      "dialog_npc_giveMeBetterOption": [
+        "Geef mij een betere prijs, deze past niet bij mij.",
+        "Deze prijs lijkt een beetje hoog. ",
+        "Ik zoek een redelijkere prijs. "
+      ],
+      "dialog_npc_noThanks": [
+        "Ik zal het doorgeven, lijkt mij geen goede deal.",
+        "Ik denk dat ik ga weigeren, de prijs werkt niet voor mij.",
+        "Nee bedankt, de deal is niet helemaal wat ik zoek."
+      ],
+      "dialog_answer_noThanks_exit": [
+        "Jouw verlies, misschien de volgende keer.",
+        "Dat is jammer. ",
+        "Sorry om dat te horen. "
+      ],
+      "dialog_npc_sellSuccess": [
+        "Ik ben geïnteresseerd in uw aanbod. ",
+        "Dit klinkt goed voor mij. ",
+        "Ik ben het eens met deze voorwaarden. "
+      ],
+      "dialog_answer_sellSuccess_normal": [
+        "Geweldig, leuk om zaken met je te doen.",
+        "Uitstekend, ik ben blij dat we tot overeenstemming konden komen.",
+        "Fantastisch, het was een genoegen om dit met je te regelen."
+      ],
+      "dialog_npc_sellFail": [
+        "Die prijs werkt voor mij niet. ",
+        "Ik kan niet akkoord gaan met die prijs. ",
+        "De prijs is te hoog voor mij. "
+      ],
+      "dialog_answer_exit": [
+        "Jammer, misschien een andere keer.",
+        "Sorry dat we het niet konden laten werken. ",
+        "Begrepen, ik hoop dat we een andere keer zaken kunnen doen."
+      ],
+      "phone_message_accept_offer": [
+        "Oké, ik neem %s hoeveelheden.",
+        "Oké, ik doe mee voor %s eenheden.",
+        "Ik ga ermee akkoord om %s hoeveelheden te kopen."
+      ],
+      "phone_message_gps": [
+        "Laat je hier zien.",
+        "Ontmoet mij op deze locatie.",
+        "Kom naar het opgegeven adres."
+      ],
+      "phone_message_no_places": [
+        "We komen echter niet tot een deal, er is iets misgegaan aan mijn kant.",
+        "Helaas moet ik me terugtrekken uit deze deal, er is een probleem aan mijn kant.",
+        "Mijn plannen zijn gewijzigd en ik kan niet doorgaan met de deal. Excuses voor het ongemak."
+      ],
+      "phone_message_drug_amount": [
+        "Ik heb %s hoeveelheden.",
+        "Mijn voorraad bedraagt ​​%s eenheden.",
+        "Ik heb momenteel %s hoeveelheden in voorraad."
+      ],
+      "phone_message_drug_amount_fail": [
+        "Je bent grappig, jongen, en je denkt dat ik zoveel nodig heb.",
+        "Je maakt vast een grapje met dat bedrag.",
+        "Dat is een goede, maar laten we serieus zijn over de hoeveelheid."
+      ],
+      "phone_message_price_question": [
+        "Hoeveel wil je voor één hoeveelheid?",
+        "Wat is de prijs per eenheid?",
+        "Kunt u mij de kosten voor elke hoeveelheid vertellen?"
+      ],
+      "phone_message_price_answer": [
+        "$%s voor één hoeveelheid.",
+        "De prijs voor elke hoeveelheid is $%s.",
+        "Elke eenheid kost u $%s."
+      ],
+      "phone_message_call": [
+        "Oké, bel me voor meer informatie.",
+        "Oké, bel me als er meer te bespreken is.",
+        "Klinkt goed. "
+      ],
+      "phone_message_price_fail": [
+        "Voor die prijs? ",
+        "Deze prijs is voor mij een dealbreaker. ",
+        "No way dat ik zoveel betaal. "
+      ]
+    }
+  }
+}

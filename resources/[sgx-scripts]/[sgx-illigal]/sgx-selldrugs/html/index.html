@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sgx-selldrugs</title>
+
+    <link rel="stylesheet" href="css/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/npsSell.css">
+    <link rel="stylesheet" href="css/telephone.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+</head>
+<body>
+    <div class="custom-tooltip"></div>
+
+    <div id="modal">
+        <h2>Title</h2>
+        <p>Are you sure you want to pedal? Are you sure you want to pedal?</p>
+        <div id="modal-buttons-container">
+            <div class="modal-button" id="modal-button-accept">Accept</div>
+            <div class="modal-button" id="modal-button-cancel">Cancel</div>
+        </div>
+    </div>
+
+    <div class="npcSell-background"></div>
+    <div id="npcSell-container">
+
+        <div id="dialog-container">
+            <div id="dialog-interactive-icons">
+                <img src="img/play.png" id="arrow-for-select-item" draggable="false" style="display: none;" />
+                <img id="dialog-interactive-backpack" draggable="false" src="img/backpack.png">
+
+                <img id="dialog-interactive-arrow" draggable="false" src="img/play.png">
+                <div id="dialog-backpack-container">
+                    <h2 id="dialog-title">EQUIPMENT</h2>
+                    <!-- <div class="dialog-backpack-item">
+                        <h2>marysia</h2>
+                        <img src="img/inventory/marijuana.png">
+                        <p>2</p>
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div id="dialog">
+                <!-- <div id="dialog-header">
+                    <h2>STRANGER</h2>
+                    <p>D2#F4L</p>
+                </div>
+
+                <div id="dialog-npc-box">
+                    <img class="dialog-icon dialog-icon-blue" src="img/chat.png">
+                    <p class="dialog-data-text">What do you want?</p>
+                </div>
+
+                <div id="dialog-player-box-first-row">
+
+                    <div id="dialog-player-first-answer">
+                        <img class="dialog-icon dialog-icon-green" src="img/chat.png">
+                        <p class="dialog-data-text">Want to have some fun today?</p>
+                    </div>
+
+                    <div id="dialog-player-second-answer">
+                        <img class="dialog-icon dialog-icon-red" src="img/cancel.png">
+                        <p class="dialog-data-text">Nothing, fuck off</p>
+                    </div>
+
+                </div>
+
+                <div id="dialog-player-third-answer">
+                    <img class="dialog-icon dialog-icon-red" src="img/cancel.png">
+                    <p class="dialog-data-text">Nothing, fuck off</p>
+                </div> -->
+
+            </div>
+        </div>
+
+        <div id="progress-container">
+
+            <div class="progress-wrapper" id="progress-respect">
+                <svg class="progress-circle-svg" width="5vw" height="5vw" viewBox="0 0 100 100">
+                    <circle class="progress-circle-back" cx="50" cy="50" r="45" />
+                    <circle class="progress-circle-bar-respect" cx="50" cy="50" r="45" />
+                </svg>
+                <div class="progress-content">
+                    <img class="progress-img" draggable="false" src="img/respect.png">
+                </div>
+            </div>
+            
+            <!-- Progress bar for Sales -->
+            <div class="progress-wrapper" id="progress-sales">
+                <svg class="progress-circle-svg" width="5vw" height="5vw" viewBox="0 0 100 100">
+                    <circle class="progress-circle-back" cx="50" cy="50" r="45" />
+                    <circle class="progress-circle-bar-sales" cx="50" cy="50" r="45" />
+                </svg>
+                <div class="progress-content">
+                    <img class="progress-img" draggable="false" src="img/sales.png">
+                </div>
+            </div>
+
+        </div>
+        
+        
+    </div>
+
+    <div id="telephone-container">
+        <img id="telephone-img" draggable="false" src="img/telephone.png">
+
+        <div id="telephone-background">
+            <div id="telephone-alert">
+                <div id="alert-title">
+                    <img src="img/messages.png">
+                    <h2>Stranger #12123</h2>
+                </div>
+                <p>How much do you want for one quantity?</p>
+            </div>
+            
+            <div id="menu" class="menu-window">
+                <div id="messages-icon" class="menu-icon" data-target="#messages-window"> 
+                    <img src="img/chat.png"> 
+                    <div id="messages-new-amount">0</div>
+                </div>
+                <div id="ogApp-icon" class="menu-icon" data-target="#app-window"> <img src="img/ogApp.png"> </div>
+                <div id="settings-icon" class="menu-icon" data-target="#settings-window"> <img src="img/settings.png"> </div>
+            </div>
+
+            <div id="messages-window" class="menu-window">
+                <div class="tel-app-title" id="tel-app-messages-title">Messages</div>
+
+                <div id="no-messages">no messages</div>
+
+                <div id="messages-container" class="custom-scrollbar">
+                    <!-- <div class="message">
+                        <img src="img/person.png">
+                        <div class="message-texts">
+                            <div class="message-title">
+                                Stranger #32423
+                            </div>
+                            <div class="message-data">
+                                12345678912345678...
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div id="message-window" class="menu-window">
+                <div id="message-nav">
+                    <img id="message-back" src="img/back.png">
+                    <p>Stranger #0</p>
+                    <!-- <img id="message-remove" src="img/removed.png"> -->
+                    <img id="message-call" src="img/call.png">
+                </div>
+
+                <div id="message-items" class="custom-scrollbar">
+                    <!-- <div class="message-item">
+                        <img src="img/person.png">
+                        <p>Got some meth for sale?</p>
+                    </div>
+
+                    <div class="message-item message-item-reverse">
+                        <img src="img/person.png">
+                        <p>Got some meth for sale?</p>
+                    </div> -->
+                </div>
+
+                <div id="message-input">
+                    <img src="img/send.png">
+                </div>
+            </div>
+
+            <div id="call-window">
+                <img src="img/person.png">
+                <h2>Stranger #0</h2>
+                <p>00:00</p>
+            </div>
+
+            <div id="app-window" class="menu-window">
+                <div class="tel-app-title" id="tel-app-ogapp-title">OG App</div>
+
+                <h2 id="ogApp-respect-title">Respect</h2>
+                <div class="app-progress-container">
+                    <div id="app-progress-respect"></div>
+                    <p>0 / 0</p>
+                </div>
+
+                <h2 id="ogApp-selling-skill-title">Selling Skill</h2>
+                <div class="app-progress-container">
+                    <div id="app-progress-selling"></div>
+                    <p>0 / 0</p>
+                </div>
+
+                <h1 id="ogApp-active-subscriptions-title">Active Subscriptions</h1>
+                <div id="app-subcriptions" class="custom-scrollbar">
+                    <!-- <div class="subscription">
+                        <img src="img/homeless.png">
+                        <div class="subscription-texts">
+                            <h2 class="subscription-name">Srebrny Brek</h2>
+                            <p class="subscription-date">Ends 20.12.2023 15:00</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div id="settings-window" class="menu-window">
+                <div class="tel-app-title" id="tel-app-settings-title">Settings</div>
+
+                <div class="setting-container">
+                    <h2 id="settings-alerts-title">Alerts</h2>
+                    <label class="switch">
+                        <input type="checkbox" id="notificationSwitch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-container">
+                    <h2 id="settings-alerts-sound-title">Alerts Sound</h2>
+                    <label class="switch">
+                        <input type="checkbox" id="soundSwitch" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+            </div>
+
+
+        </div> 
+
+        <div id="telephone-button-menu"></div>
+        <div id="telephone-button-back"></div>
+    </div>
+
+    <audio id="callAudio1" src="audio/audioCall1.mp3" preload="auto"></audio>
+    <audio id="callAudio2" src="audio/audioCall2.mp3" preload="auto"></audio>
+    <audio id="callAudio3" src="audio/audioCall3.mp3" preload="auto"></audio>
+    <audio id="notification" src="audio/notification.mp3" preload="auto"></audio>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery-ui.min.js"></script>
+    <script src="js/translation.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/npcSell.js"></script>
+    <script src="js/mole.js"></script>
+    <script src="js/telephone.js"></script>
+</body>
+</html>
